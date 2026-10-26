@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="description" content="SoundBridge. A standalone sound-aware watch concept. Feel the moment. See where to look.">
+  <title>SoundBridge — A Little Closer to Your World</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="chrome topbar">
+    <a class="wordmark" href="#1" aria-label="SoundBridge, first slide"><span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>SoundBridge</a>
+    <div class="top-actions"><span class="concept-label">PRODUCT CONCEPT</span><button class="icon-button" id="overview-toggle" aria-label="Show all slides" title="All slides · O"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="3" width="6" height="6" rx="1.5"/><rect x="3" y="15" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/></svg></button><button class="icon-button" id="fullscreen" aria-label="Enter fullscreen" title="Fullscreen · F"><svg viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5"/></svg></button><button class="icon-button" id="help-toggle" aria-label="Presentation controls" title="Controls · ?"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.3 9a2.7 2.7 0 1 1 4.2 2.2c-1.3.7-1.5 1-1.5 2.3M12 17h.01"/></svg></button></div>
+  </header>
+  <main id="deck" aria-label="SoundBridge concept presentation"></main>
+  <footer class="chrome bottom-bar">
+    <div class="chapter-label" id="chapter-label">The idea</div>
+    <nav class="progress-dots" id="progress-dots" aria-label="Slide navigation"></nav>
+    <div class="page-controls"><span id="slide-number" aria-live="polite">01 <span>/ 20</span></span><button class="arrow-button" id="previous" aria-label="Previous slide"><svg viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg></button><button class="arrow-button next" id="next" aria-label="Next slide"><svg viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></svg></button></div>
+  </footer>
+  <div class="keyboard-hint" id="keyboard-hint">Use <kbd>←</kbd> <kbd>→</kbd> to explore <span>·</span> Press <kbd>F</kbd> for fullscreen</div>
+  <dialog id="overview" aria-label="All presentation slides"><div class="dialog-head"><div><p class="eyebrow">THE SOUNDBRIDGE STORY</p><h2>Every moment, at a glance.</h2></div><button class="close-button" data-close="overview" aria-label="Close overview">×</button></div><div class="overview-grid" id="overview-grid"></div></dialog>
+  <dialog id="help" aria-label="Presentation controls"><div class="dialog-head"><h2>A few simple controls.</h2><button class="close-button" data-close="help" aria-label="Close controls">×</button></div><div class="help-list"><p><span>Next / previous</span><kbd>→ / ←</kbd></p><p><span>Next slide</span><kbd>Space</kbd></p><p><span>Fullscreen</span><kbd>F</kbd></p><p><span>All slides</span><kbd>O</kbd></p><p><span>First / last slide</span><kbd>Home / End</kbd></p><p><span>Close a panel</span><kbd>Esc</kbd></p></div><p class="fine-print">Swipe on touch screens. Interactive controls work inside each slide. Motion follows your system’s reduced-motion preference.</p><button class="text-link" id="print">Save a static PDF <span>↗</span></button><p class="fine-print">Concept visuals and illustrative AI-generated photography. On-watch recognition and directional sensing describe the proposed product; the presentation does not perform real sound detection.</p></dialog>
+  <div class="sr-only" id="announcement" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

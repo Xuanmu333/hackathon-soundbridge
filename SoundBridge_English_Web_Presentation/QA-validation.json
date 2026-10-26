@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "slides": 20,
+  "language": "English",
+  "widths": [
+    390,
+    1280,
+    1600
+  ],
+  "checks": [
+    "setup",
+    "sound selection",
+    "haptic preview",
+    "direction sector",
+    "conversation mode",
+    "context modes",
+    "pause",
+    "personal preferences",
+    "overview",
+    "keyboard",
+    "queued transitions",
+    "reduced motion",
+    "English-only content"
+  ],
+  "errors": [],
+  "layoutIssues": []
+}
