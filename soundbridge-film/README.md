@@ -1,6 +1,14 @@
 # SoundBridge — Safety, Independence and Humanity
 
-Current editable project: a 150-second concept film with Chinese narration, bilingual subtitles, animated watch demonstrations and an independent-outing story. Output: `../SoundBridge_Film/SoundBridge_Safety_Refined_150s.mp4`.
+Current editable project: a 150-second Three.js concept film with Chinese narration, bilingual subtitles, a state-driven product console, spatial sound propagation, a red procedural watch with rounded metal casework, curved glass, fine-grain matte straps, studio reflections and a charcoal console and an independent-outing story. Output: `../SoundBridge_Film/SoundBridge_Safety_3D_Red_150s.mp4`.
+
+## Interactive 3D console
+
+Run `npm install` followed by `npm run lab`, then open `http://127.0.0.1:3010/three-lab.html`.
+
+Use the event buttons and bearing slider to position a simulated sound source, then trigger its propagation, microphone reception, on-device recognition and haptic response. The same scene drives the video. The controls also expose an exploded view, text size, vibration strength, camera orbit, pause and charging. Selecting a different sound while paused preserves the pause state. This is an explanatory simulation; it does not access the microphone or classify real audio.
+
+`npm run build:lab` creates the standalone web bundle in `../SoundBridge_3D_Control_Demo/`. Serve that directory over HTTP and open `three-lab.html`. No external model, HDR or third-party reference assets are fetched at runtime.
 
 ## Preview
 
@@ -9,20 +17,22 @@ npm install
 npm run dev
 ```
 
-Select `SoundBridge-Film` for the full timeline. The `Scenes` folder contains the twelve editable chapters.
+Select `SoundBridge-3D-Film` for the new full timeline. `SoundBridge-Film` and the `Scenes` folder preserve the previous edition.
 
 ## Render
 
 ```sh
-npx remotion render src/index.ts SoundBridge-Film ../SoundBridge_Film/qa/refined-master.mp4 --browser-executable='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --codec=h264 --crf=18 --concurrency=4
+npx remotion render src/index.ts SoundBridge-3D-Film ../SoundBridge_Film/qa/red-master.mp4 --browser-executable='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --gl=angle --codec=h264 --crf=20 --concurrency=3
 ```
 
 The delivered film reuses the validated safety edition audio unchanged, as checked by matching audio packet hashes. The installed Chrome renderer works on this Mac.
 
-The current edition refines timing, hierarchy and continuity: a signal travels into the processor and returns as a confirmed event; haptic pulses drive their own ripples; setting gestures preserve velocity and show a bounded edge response. Decorative movement settles, and unavailable states remain explicit. Narration and the safety story are preserved. See `../SoundBridge_Film/动效打磨说明.html` for the reference-to-implementation mapping.
+The current edition follows a persistent 3D product rather than separate technical illustration shots. A finite sound wave travels through space to the watch, reception precedes classification, and a confirmed class drives a distinct haptic pattern. Internal layers separate to explain the proposed architecture. The source's spatial position and the transmission time are enlarged for explanation, not presented as measured physical performance. See `../SoundBridge_Film/三维控制台设计说明.html` for the reference-to-implementation mapping; the earlier motion study is documented in `动效打磨说明.html`.
 
 ## Contents
 
+- `src/studio3d/`: shared Three.js model, frame-driven state, control console, browser entry and video timeline. All video motion derives from the Remotion frame; no independent animation loop runs in the film.
+- `scripts/qa-three.mjs`: representative 3D chapter stills using the installed Chrome renderer.
 - `src/script.json`: current scene timing, Chinese narration, English translations and voice timings.
 - `src/scenes/`: twelve visual chapters. Conversation/speech alerts have been removed.
 - `src/visuals.tsx`: watch, signal, subtitle and shared layout components.

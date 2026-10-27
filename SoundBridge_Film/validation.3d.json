@@ -1,0 +1,46 @@
+{
+  "file": "SoundBridge_Safety_3D_Red_150s.mp4",
+  "edition": "Red metal / charcoal console / studio lighting",
+  "duration_seconds": 150.1,
+  "width": 1920,
+  "height": 1080,
+  "frames": 4500,
+  "fps": "30/1",
+  "codec": "h264",
+  "audio_codec": "aac",
+  "audio_sample_rate": "48000",
+  "audio_channels": 2,
+  "audio_unchanged_from_safety_edition": true,
+  "audio_packet_hash": "SHA256=a2810b9df3b8ad17485d29b0935a0232921974c0aec06915a396d913c44a2895",
+  "full_decode": "passed",
+  "sha256": "717140cfb7ca86ec1052abf595f4328b9aa77fa1a08dbeee456d5d171564583a",
+  "bytes": 25463290,
+  "visual_frames_reviewed": [
+    425,
+    650,
+    1335,
+    1550,
+    2200,
+    2520,
+    2920,
+    3690,
+    4290
+  ],
+  "browser_checks": [
+    "Standalone built page loads from local HTTP server",
+    "Paused sound selection preserves pause and disables emission",
+    "Resume restores source and pipeline",
+    "Bearing range changes source position",
+    "Strength range updates to 100 percent",
+    "Exploded view and camera controls respond",
+    "Charging disables emission",
+    "Large text state toggles",
+    "Red metal, curved glass, matte strap and neutral UI inspected in browser"
+  ],
+  "limitations": [
+    "Concept model, no live audio capture or classifier",
+    "Propagation distance and timing are enlarged for explanation",
+    "Hardware performance and recognition accuracy require real-world validation"
+  ],
+  "source": "src/studio3d/"
+}

@@ -9,26 +9,34 @@
   },
   "private": true,
   "dependencies": {
+    "@react-three/fiber": "^9.8.2",
     "@remotion/captions": "^4.0.539",
     "@remotion/cli": "4.0.539",
     "@remotion/media": "^4.0.539",
+    "@remotion/three": "4.0.539",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "remotion": "4.0.539"
+    "remotion": "4.0.539",
+    "three": "^0.186.1"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.539",
     "@types/react": "19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.186.0",
     "@types/web": "0.0.166",
     "eslint": "10.12.0",
     "prettier": "3.8.1",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vite": "^8.3.5"
   },
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "lab": "vite --host 127.0.0.1 --port 3010",
+    "build:lab": "vite build --config vite.lab.config.mts"
   },
   "allowScripts": {
     "esbuild": false
