@@ -15,9 +15,9 @@ for k,start in enumerate(np.arange(0,150,8)):
  for j,freq in enumerate(chord): tone(float(start),min(10,150-start),freq,.018,(j-1.5)/2)
  for j in range(8):tone(float(start+j),2.7,chord[(j*3)%4]*4,.028 if j%2==0 else .017,(-1)**j*.55,True)
 # Restrained UI motifs and abstract haptic clicks.
-for st in [12,22,38,50,62,74,86,101,115,127,140]:
+for st in [12,26,38,54,66,81,93,105,117,129,140]:
  tone(st,1.7,880,.035,-.25,True);tone(st+.13,1.4,1320,.018,.3,True)
-for st in [40.5,41,42,42.5,76,76.35,77.25,77.6,82,82.4,82.8]:tone(st,.15,110,.07,0,True)
+for st in [16,16.35,16.7,55,55.35,56.2,56.55,61,61.4,61.8]:tone(st,.15,110,.07,0,True)
 fade=np.minimum(np.arange(len(mix))/sr/3,1)*np.minimum((len(mix)-np.arange(len(mix)))/sr/4,1)
 mix*=fade[:,None]
 with wave.open(str(Path(__file__).resolve().parents[1]/'public'/'score.wav'),'wb') as out:

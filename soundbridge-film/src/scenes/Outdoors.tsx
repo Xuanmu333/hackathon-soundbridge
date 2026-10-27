@@ -1,9 +1,9 @@
 import {useCurrentFrame} from 'remotion';
-import {Scene,Title,Watch,Footage,C,Note} from '../visuals';
-export const Outdoors=()=>{const f=useCurrentFrame(),horn=f>205;return <Scene id={5}>
- <Title kicker="04 / OUT AND ABOUT" title="感知身边，保持自己的步调。" width={1650}/>
- <Footage src="outdoor" y={365} w={1010} h={440}/>
- <Watch x={1290} y={370} size={400} label={horn?'车辆鸣笛':'自行车铃'} sub="Pause. Look around." kind={horn?'horn':'bike'} color={C.warm}/>
- <div style={{position:'absolute',left:135,top:715,padding:'16px 24px',borderRadius:12,background:'#06111de8',fontSize:28,color:C.warm}}>户外筛选 → {horn?'鸣笛识别':'车铃识别'} → 三次短振</div>
- <Note text="环境感知辅助，不是导航或防碰撞系统。"/>
+import {Scene,Title,StoryImage,Watch,Note,C} from '../visuals';
+export const Outdoors=()=>{const f=useCurrentFrame(),on=f>100;return <Scene id={1}>
+ <Title kicker="01 / NOTICE THE CUE" title="车铃响起，腕上提醒。" width={1500}/>
+ <StoryImage name="walking"/>
+ <Watch x={1310} y={390} size={390} label={on?'车铃提示':'户外感知'} sub={on?'请观察周围 / Look around':'车铃 · 鸣笛'} kind={on?'bike':'wave'} color={C.warm} active={on}/>
+ <div style={{position:'absolute',left:130,top:735,fontSize:30,padding:'14px 24px',background:'#05111dee',color:C.warm}}>{on?'车铃 → 三次短振 → 图标与文字':'步道上的环境声音'}</div>
+ <Note text="场景与触觉为概念演示 · 识别效果尚待实测"/>
  </Scene>};

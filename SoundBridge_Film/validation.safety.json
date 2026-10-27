@@ -1,0 +1,33 @@
+{
+  "file": "SoundBridge_Safety_Humanity_150s.mp4",
+  "duration_seconds": 150.1,
+  "video": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": "4500"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "48000",
+    "channels": 2,
+    "normalization": "FFmpeg loudnorm I=-16 TP=-1.5 LRA=11"
+  },
+  "size_bytes": 59831218,
+  "sha256": "23cd4e51958941ce900162f0a6f05df14ecfdb10bef00b0a2e34339b8f72c5c2",
+  "checks": {
+    "eslint_typescript": "passed",
+    "git_diff_check": "passed",
+    "full_ffmpeg_decode": "passed",
+    "narration_lines": 37,
+    "narration_within_scenes": true,
+    "subtitle_order_and_nonoverlap": true,
+    "no_conversation_in_current_script": true,
+    "chapter_stills_reviewed": 12,
+    "additional_studio_check": "unavailable-sensing state and uncropped opening"
+  },
+  "scope": "Concept animation only; hardware, recognition performance, direction estimation and proposed states not validated",
+  "assets": "AI-generated fictional park and friendship keyframes; existing home video; original synthesized music",
+  "previous_edition_preserved": true
+}

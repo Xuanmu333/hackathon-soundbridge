@@ -1,0 +1,184 @@
+1
+00:00:00,650 --> 00:00:03,245
+独自出门，去见一位朋友。
+Heading out on your own to meet a friend.
+
+2
+00:00:03,352 --> 00:00:08,176
+对聋人和重听人士，重要的环境提醒，也应有触觉的入口。
+For deaf and hard-of-hearing people, important cues should be accessible through touch.
+
+3
+00:00:08,283 --> 00:00:11,270
+SoundBridge，让重要的提醒被感知。
+SoundBridge. Make important cues easier to notice.
+
+4
+00:00:12,650 --> 00:00:15,604
+共享步道上，身后传来车铃。
+On a shared path, a bicycle bell rings behind you.
+
+5
+00:00:15,714 --> 00:00:21,636
+拟议系统识别声音类别，触发三次短振，并显示车铃图标和文字。
+The proposed system recognizes the sound, then shows a bicycle-bell alert with three short pulses.
+
+6
+00:00:21,745 --> 00:00:25,270
+提醒提供线索，接下来，观察周围。
+The alert offers a cue. Next, check your surroundings.
+
+7
+00:00:26,650 --> 00:00:30,516
+她停在步道一侧，转头确认骑行者的位置。
+She pauses at the side of the path and checks where the cyclist is.
+
+8
+00:00:30,625 --> 00:00:34,806
+确认空间后，让对方通过，再继续自己的行程。
+After checking the space, she lets the cyclist pass and continues.
+
+9
+00:00:34,915 --> 00:00:37,270
+选择，由她自己作出。
+The decision is hers.
+
+10
+00:00:38,650 --> 00:00:42,104
+麦克风采集短时声音，转换为频谱特征。
+Microphones capture short audio windows and convert them into spectral features.
+
+11
+00:00:42,204 --> 00:00:45,658
+拟议的本地模型，识别车铃、鸣笛和门铃。
+The proposed on-device model recognizes bicycle bells, horns and doorbells.
+
+12
+00:00:45,759 --> 00:00:50,195
+置信度筛选、连续确认和重复抑制，再决定是否提醒。
+Confidence checks, temporal confirmation and deduplication determine whether to alert.
+
+13
+00:00:50,295 --> 00:00:53,270
+真实环境中的漏报和误报，仍需验证。
+Missed detections and false alerts still need testing in real environments.
+
+14
+00:00:54,650 --> 00:00:58,407
+声音类别映射到振动节奏，再驱动触觉马达。
+Sound categories map to rhythms that drive the haptic actuator.
+
+15
+00:00:58,511 --> 00:01:02,307
+门铃用两组双击，车铃和鸣笛用三次短振。
+Doorbells use two paired taps; bicycle bells and horns use three short pulses.
+
+16
+00:01:02,412 --> 00:01:05,270
+配合图标与文字，不只依赖颜色。
+Icons and text reinforce the cue, without relying on color alone.
+
+17
+00:01:06,650 --> 00:01:09,798
+来向估计，需要多麦克风硬件和校准。
+Direction estimation requires multiple microphones and calibration.
+
+18
+00:01:09,898 --> 00:01:13,741
+比较声音到达的时间差，估计相对手表的大致来向。
+Arrival-time differences estimate an approximate direction relative to the watch.
+
+19
+00:01:13,842 --> 00:01:17,259
+无法可靠判断时，明确显示方向不确定。
+When the estimate is unreliable, show that the direction is uncertain.
+
+20
+00:01:17,359 --> 00:01:20,270
+它不能代替观察，也不保证避开危险。
+It cannot replace observation or guarantee avoidance of danger.
+
+21
+00:01:21,650 --> 00:01:25,918
+拟议状态设计，让暂停、低电量和感知故障清晰可见。
+The proposed status design makes pause, low battery and sensing faults visible.
+
+22
+00:01:26,022 --> 00:01:29,363
+暂停或故障时，明确告知无法提供提醒。
+When paused or sensing fails, clearly show that alerts are unavailable.
+
+23
+00:01:29,467 --> 00:01:32,270
+没有收到提醒，不代表周围没有风险。
+No alert does not mean there is no risk nearby.
+
+24
+00:01:33,650 --> 00:01:37,051
+选择关注的声音，试一试不同的振动强度。
+Choose the sounds to notice and try different vibration strengths.
+
+25
+00:01:37,158 --> 00:01:40,143
+字号也能调整，偏好保存在本地。
+Adjust text size and store preferences locally.
+
+26
+00:01:40,249 --> 00:01:44,270
+与聋人和重听人士共同测试，让提示容易理解。
+Test together with deaf and hard-of-hearing people to make cues understandable.
+
+27
+00:01:45,650 --> 00:01:49,269
+同样的感知流程，也能用于居家门铃提示。
+The same sensing flow can support doorbell alerts at home.
+
+28
+00:01:49,376 --> 00:01:53,903
+振动与文字提示有人来访，让你继续专注自己的生活。
+Vibration and text signal a visitor while you focus on your day.
+
+29
+00:01:54,010 --> 00:01:56,270
+何时回应，由你决定。
+Choose when to respond.
+
+30
+00:01:57,650 --> 00:02:01,213
+居家关注门铃，户外关注车铃与鸣笛。
+Home focuses on doorbells; outdoors on bicycle bells and horns.
+
+31
+00:02:01,321 --> 00:02:05,717
+暂停会停止采集与提醒，并持续显示暂停状态。
+Pausing stops capture and alerts, with a persistent paused indicator.
+
+32
+00:02:05,825 --> 00:02:08,270
+准备好了，再恢复感知。
+Resume awareness when you are ready.
+
+33
+00:02:09,650 --> 00:02:12,528
+方案默认本地处理，不保存原始录音。
+The proposed default is local processing without saving raw recordings.
+
+34
+00:02:12,632 --> 00:02:16,271
+可选事件历史，只记录类别与时间，由你管理。
+Optional event history stores category and time under your control.
+
+35
+00:02:16,375 --> 00:02:19,270
+这些目标，需要在最终软硬件中落实。
+These goals must be implemented in the final hardware and software.
+
+36
+00:02:20,650 --> 00:02:25,194
+从独自出门，到与朋友相聚，生活按自己的节奏展开。
+From heading out alone to meeting a friend, life moves at your own pace.
+
+37
+00:02:25,312 --> 00:02:29,270
+SoundBridge。让重要的提醒，被及时感知。
+SoundBridge. Help important cues reach you when they matter.
