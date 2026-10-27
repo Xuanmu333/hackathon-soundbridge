@@ -1,0 +1,36 @@
+{
+  "file": "SoundBridge_Safety_Refined_150s.mp4",
+  "duration_seconds": 150.1,
+  "video": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": "4500"
+  },
+  "audio": {
+    "codec": "aac",
+    "sample_rate": "48000",
+    "channels": 2,
+    "normalization": "Unchanged audio copied from validated safety edition; original loudnorm target I=-16 TP=-1.5 LRA=11"
+  },
+  "size_bytes": 55286836,
+  "sha256": "f73aed0f5b0cc80258db704008df0af639a10356282173c50ba390cdd572c26d",
+  "checks": {
+    "eslint_typescript": "passed",
+    "git_diff_check": "passed",
+    "full_ffmpeg_decode": "passed",
+    "narration_lines": 37,
+    "narration_within_scenes": true,
+    "subtitle_order_and_nonoverlap": true,
+    "no_conversation_in_current_script": true,
+    "refinement_keyframes_reviewed": 18,
+    "narration_and_timeline_unchanged": true,
+    "audio_packet_hash_matches_safety_edition": true
+  },
+  "scope": "Concept animation only; hardware, recognition performance, direction estimation and proposed states not validated",
+  "assets": "AI-generated fictional lifestyle and conceptual hardware images; frame-driven signal meshes, particles, optical-style traces, orbital fields and haptic pulses; existing home video and original score",
+  "previous_edition_preserved": true,
+  "reference_handling": "Third-party recording used only for local analysis; original recording and extracted frames excluded from public delivery",
+  "interaction_scope": "Scripted concept demonstrations, not verified live device interactions"
+}

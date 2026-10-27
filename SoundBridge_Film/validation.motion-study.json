@@ -1,0 +1,26 @@
+{
+  "file": "SoundBridge_Motion_Study_24s.mp4",
+  "duration_seconds": 24,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "scope": "Local motion study: haptic feedback and pause/resume",
+  "checks": {
+    "eslint_typescript": "passed",
+    "git_diff_check": "passed",
+    "full_ffmpeg_decode": "passed",
+    "reviewed_frames": [
+      25,
+      205,
+      510,
+      517,
+      540,
+      649,
+      670
+    ]
+  },
+  "reference_evidence": "A single cover screenshot; original motion timing and argument not available",
+  "edition": "Historical pilot created before full reference analysis"
+}

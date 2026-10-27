@@ -1,6 +1,6 @@
 # SoundBridge — Safety, Independence and Humanity
 
-Current editable project: a 150-second concept film with Chinese narration, bilingual subtitles, animated watch demonstrations and an independent-outing story. Output: `../SoundBridge_Film/SoundBridge_Safety_SciFi_150s.mp4`.
+Current editable project: a 150-second concept film with Chinese narration, bilingual subtitles, animated watch demonstrations and an independent-outing story. Output: `../SoundBridge_Film/SoundBridge_Safety_Refined_150s.mp4`.
 
 ## Preview
 
@@ -14,12 +14,12 @@ Select `SoundBridge-Film` for the full timeline. The `Scenes` folder contains th
 ## Render
 
 ```sh
-npx remotion render src/index.ts SoundBridge-Film ../SoundBridge_Film/qa/scifi-master.mp4 --browser-executable='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --codec=h264 --crf=18 --concurrency=4
+npx remotion render src/index.ts SoundBridge-Film ../SoundBridge_Film/qa/refined-master.mp4 --browser-executable='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --codec=h264 --crf=18 --concurrency=4
 ```
 
-Normalize final audio to -16 LUFS with FFmpeg as recorded in the validation report. The installed Chrome renderer works on this Mac.
+The delivered film reuses the validated safety edition audio unchanged, as checked by matching audio packet hashes. The installed Chrome renderer works on this Mac.
 
-The current visual edition adds cinematic processor and exploded-watch imagery, flowing signal traces, a rotating particle sound field and orbital interface detail. Narration, safety narrative and uncertainty handling are preserved.
+The current edition refines timing, hierarchy and continuity: a signal travels into the processor and returns as a confirmed event; haptic pulses drive their own ripples; setting gestures preserve velocity and show a bounded edge response. Decorative movement settles, and unavailable states remain explicit. Narration and the safety story are preserved. See `../SoundBridge_Film/动效打磨说明.html` for the reference-to-implementation mapping.
 
 ## Contents
 
@@ -35,3 +35,5 @@ The current visual edition adds cinematic processor and exploded-watch imagery, 
 - `scripts/qa.mjs`: chapter stills for layout inspection.
 
 The film presents proposed behavior, including uncertainty and device availability. Hardware, recognition, direction estimates, status handling and privacy controls require implementation and validation. It makes no collision-avoidance guarantee. See `../SoundBridge_Film/安全版制作说明与分镜.md` for storyboard and limitations. The earlier film and original web presentation remain available for comparison.
+
+`Motion-Study` is a short local review composition. The original third-party reference recording and extracted frames are excluded from public deliverables.

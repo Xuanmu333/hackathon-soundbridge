@@ -26,7 +26,9 @@ const Film=()=>{const {fps}=useVideoConfig();return <><Series>
 <Series.Sequence name="11 Privacy" durationInFrames={330} premountFor={fps}><Privacy/></Series.Sequence>
 <Series.Sequence name="12 Closing" durationInFrames={300} premountFor={fps}><Closing/></Series.Sequence>
 </Series><Audio src={staticFile('score.wav')} premountFor={fps} volume={.5}/></>};
+const MotionStudy=()=> <Series><Series.Sequence durationInFrames={360}><Haptics/></Series.Sequence><Series.Sequence durationInFrames={360}><Modes/></Series.Sequence></Series>;
 export const RemotionRoot=()=> <>
+<Composition id="Motion-Study" component={MotionStudy} durationInFrames={720} fps={30} width={1920} height={1080}/>
 <Composition id="SoundBridge-Film" component={Film} durationInFrames={4500} fps={30} width={1920} height={1080}/><Folder name="Scenes">
 <Composition id="Opening" component={Opening} durationInFrames={360} fps={30} width={1920} height={1080}/>
 <Composition id="Outdoors" component={Outdoors} durationInFrames={420} fps={30} width={1920} height={1080}/>
