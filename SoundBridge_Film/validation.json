@@ -1,0 +1,20 @@
+{
+  "durationSeconds": 150,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "scenes": 12,
+  "voiceLines": 34,
+  "checks": {
+    "typescriptAndLint": "passed",
+    "sceneStills": "12 chapter stills visually reviewed",
+    "narrationOverlap": "none",
+    "narrationClippingAtSceneBoundaries": "none",
+    "fullVideoAndAudioDecode": "passed: FFmpeg reported no decoding errors",
+    "audioMastering": "loudnorm target -16 LUFS, -1.5 dBTP, stereo AAC 48 kHz"
+  },
+  "status": "complete",
+  "output": "SoundBridge_Tech_Humanity_150s.mp4",
+  "fileDurationSeconds": 150.1,
+  "fileSizeBytes": 50104602
+}

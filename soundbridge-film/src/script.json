@@ -1,0 +1,348 @@
+[
+  {
+    "name": "Opening",
+    "duration": 12,
+    "start": 0,
+    "title": "让每个重要时刻，都被感知",
+    "en": "FEEL EVERY MOMENT",
+    "voice": [
+      {
+        "file": "voice/00-00.mp3",
+        "start": 0.65,
+        "duration": 3.288,
+        "zh": "有些重要的时刻，从一个声音开始。",
+        "en": "Some meaningful moments begin with a sound."
+      },
+      {
+        "file": "voice/00-01.mp3",
+        "start": 4.196,
+        "duration": 3.744,
+        "zh": "一声门铃，一句问候，一次擦肩而过。",
+        "en": "A doorbell. A greeting. Someone passing by."
+      },
+      {
+        "file": "voice/00-02.mp3",
+        "start": 8.198,
+        "duration": 2.952,
+        "zh": "让这些连接，被更多人感知。",
+        "en": "Make those connections easier to notice."
+      }
+    ]
+  },
+  {
+    "name": "Architecture",
+    "duration": 10,
+    "start": 12,
+    "title": "把声音，变成触觉",
+    "en": "SOUND → UNDERSTANDING → TOUCH",
+    "voice": [
+      {
+        "file": "voice/01-00.mp3",
+        "start": 0.65,
+        "duration": 4.2,
+        "zh": "SoundBridge，构想一款独立运行的声音感知手表。",
+        "en": "SoundBridge imagines a standalone sound-aware watch."
+      },
+      {
+        "file": "voice/01-01.mp3",
+        "start": 5.286,
+        "duration": 3.864,
+        "zh": "采集、识别、提醒，都在腕上完成。",
+        "en": "Sensing, recognition and alerts — all on the wrist."
+      }
+    ]
+  },
+  {
+    "name": "Recognition",
+    "duration": 16,
+    "start": 22,
+    "title": "它如何理解环境声音？",
+    "en": "01 / ON-DEVICE SOUND AI",
+    "voice": [
+      {
+        "file": "voice/02-00.mp3",
+        "start": 0.65,
+        "duration": 4.310917,
+        "zh": "麦克风采集声音，将短时音频转换为频谱特征。",
+        "en": "Microphones capture audio; short windows become spectral features."
+      },
+      {
+        "file": "voice/02-01.mp3",
+        "start": 5.189,
+        "duration": 4.703375,
+        "zh": "轻量模型在本地，区分门铃、人声、车铃和鸣笛。",
+        "en": "A local model distinguishes doorbells, speech, bicycle bells and horns."
+      },
+      {
+        "file": "voice/02-02.mp3",
+        "start": 10.12,
+        "duration": 5.030417,
+        "zh": "再通过置信度判断、连续确认与重复抑制，减少无效打扰。",
+        "en": "Confidence checks, temporal confirmation and deduplication limit unwanted alerts."
+      }
+    ]
+  },
+  {
+    "name": "Home",
+    "duration": 12,
+    "start": 38,
+    "title": "不错过，一个熟悉的到来",
+    "en": "02 / AT HOME",
+    "voice": [
+      {
+        "file": "voice/03-00.mp3",
+        "start": 0.65,
+        "duration": 5.043083,
+        "zh": "门铃响起，识别结果触发专属振动，屏幕显示门铃事件。",
+        "en": "A recognized doorbell triggers its haptic pattern and an on-screen event."
+      },
+      {
+        "file": "voice/03-01.mp3",
+        "start": 5.93,
+        "duration": 5.219667,
+        "zh": "即使正在忙碌，也能知道有人来访。何时回应，由你决定。",
+        "en": "Notice a visitor while you are busy. Choose when to respond."
+      }
+    ]
+  },
+  {
+    "name": "Conversation",
+    "duration": 12,
+    "start": 50,
+    "title": "让加入对话，多一个线索",
+    "en": "03 / IN CONVERSATION",
+    "voice": [
+      {
+        "file": "voice/04-00.mp3",
+        "start": 0.65,
+        "duration": 3.540875,
+        "zh": "开启交谈模式，系统优先提醒附近的人声。",
+        "en": "Conversation mode prioritizes nearby speech."
+      },
+      {
+        "file": "voice/04-01.mp3",
+        "start": 4.416,
+        "duration": 2.882292,
+        "zh": "一次轻柔长振，提醒你抬头看看。",
+        "en": "One gentle, sustained pulse invites you to look up."
+      },
+      {
+        "file": "voice/04-02.mp3",
+        "start": 7.524,
+        "duration": 3.625958,
+        "zh": "它提示有人说话，不判断对方是否正在叫你。",
+        "en": "It detects speech, not whether someone is addressing you."
+      }
+    ]
+  },
+  {
+    "name": "Outdoors",
+    "duration": 12,
+    "start": 62,
+    "title": "感知身边，保持自己的步调",
+    "en": "04 / OUT AND ABOUT",
+    "voice": [
+      {
+        "file": "voice/05-00.mp3",
+        "start": 0.65,
+        "duration": 4.132958,
+        "zh": "户外模式关注车铃与鸣笛，识别后发送短促振动。",
+        "en": "Outdoor mode focuses on bicycle bells and horns, with brief pulses."
+      },
+      {
+        "file": "voice/05-01.mp3",
+        "start": 5.008,
+        "duration": 3.230042,
+        "zh": "停一停，看看周围，再由自己判断下一步。",
+        "en": "Pause, look around, and decide your next move."
+      },
+      {
+        "file": "voice/05-02.mp3",
+        "start": 8.463,
+        "duration": 2.687458,
+        "zh": "这是环境提示，不替代道路观察。",
+        "en": "An awareness cue that does not replace looking around."
+      }
+    ]
+  },
+  {
+    "name": "Haptics",
+    "duration": 12,
+    "start": 74,
+    "title": "不用看屏幕，也能分辨",
+    "en": "05 / A TACTILE LANGUAGE",
+    "voice": [
+      {
+        "file": "voice/06-00.mp3",
+        "start": 0.65,
+        "duration": 2.623042,
+        "zh": "事件类别，映射到不同的振动节奏。",
+        "en": "Each event category maps to a different haptic rhythm."
+      },
+      {
+        "file": "voice/06-01.mp3",
+        "start": 3.494,
+        "duration": 4.351167,
+        "zh": "门铃是两组双击，人声是一段长振，交通提示是三次短振。",
+        "en": "Doorbell: two paired taps. Speech: one long pulse. Traffic: three short taps."
+      },
+      {
+        "file": "voice/06-02.mp3",
+        "start": 8.066,
+        "duration": 3.084458,
+        "zh": "驱动触觉马达，让声音有了可学习的触感。",
+        "en": "A haptic actuator turns sound categories into learnable sensations."
+      }
+    ]
+  },
+  {
+    "name": "Direction",
+    "duration": 15,
+    "start": 86,
+    "title": "不只知道发生了什么",
+    "en": "06 / APPROXIMATE DIRECTION",
+    "voice": [
+      {
+        "file": "voice/07-00.mp3",
+        "start": 0.65,
+        "duration": 3.064542,
+        "zh": "方向提示，需要兼容的多麦克风硬件。",
+        "en": "Direction cues require compatible multi-microphone hardware."
+      },
+      {
+        "file": "voice/07-01.mp3",
+        "start": 3.936,
+        "duration": 3.502917,
+        "zh": "比较声音到达不同麦克风的时间差，估计来向。",
+        "en": "Compare arrival times across microphones to estimate the source direction."
+      },
+      {
+        "file": "voice/07-02.mp3",
+        "start": 7.661,
+        "duration": 2.862917,
+        "zh": "表盘用柔和扇区，提示大致方向。",
+        "en": "A soft sector indicates an approximate direction."
+      },
+      {
+        "file": "voice/07-03.mp3",
+        "start": 10.746,
+        "duration": 3.40425,
+        "zh": "精度仍需在真实噪声和佩戴条件下验证。",
+        "en": "Accuracy still needs validation with real noise and wrist placement."
+      }
+    ]
+  },
+  {
+    "name": "Personalize",
+    "duration": 14,
+    "start": 101,
+    "title": "你的手腕，你的偏好",
+    "en": "07 / MAKE IT YOURS",
+    "voice": [
+      {
+        "file": "voice/08-00.mp3",
+        "start": 0.65,
+        "duration": 4.249958,
+        "zh": "首次使用，开启感知，选择声音，再试一试振动。",
+        "en": "Start awareness, choose your sounds, then preview the vibration."
+      },
+      {
+        "file": "voice/08-01.mp3",
+        "start": 5.127,
+        "duration": 4.43925,
+        "zh": "只接收选中的声音，文字大小与振动强度也能调整。",
+        "en": "Choose the sounds to receive, plus text size and vibration strength."
+      },
+      {
+        "file": "voice/08-02.mp3",
+        "start": 9.793,
+        "duration": 3.357333,
+        "zh": "把偏好保存在本地，让提醒更适合自己。",
+        "en": "Store preferences locally so alerts fit your needs."
+      }
+    ]
+  },
+  {
+    "name": "Modes",
+    "duration": 12,
+    "start": 115,
+    "title": "需要连接，也需要安静",
+    "en": "08 / CONTROL STAYS WITH YOU",
+    "voice": [
+      {
+        "file": "voice/09-00.mp3",
+        "start": 0.65,
+        "duration": 4.093875,
+        "zh": "居家、交谈、户外，切换的是声音筛选规则。",
+        "en": "Home, conversation and outdoors apply different sound filters."
+      },
+      {
+        "file": "voice/09-01.mp3",
+        "start": 4.972,
+        "duration": 3.70825,
+        "zh": "想安静时，暂停感知，停止采集与提醒。",
+        "en": "Pause awareness to stop capture and alerts when you want quiet."
+      },
+      {
+        "file": "voice/09-02.mp3",
+        "start": 8.908,
+        "duration": 2.242292,
+        "zh": "准备好了，再轻触恢复。",
+        "en": "Tap to resume when you are ready."
+      }
+    ]
+  },
+  {
+    "name": "Privacy",
+    "duration": 13,
+    "start": 127,
+    "title": "让私人的时刻，留在腕上",
+    "en": "09 / LOCAL-FIRST PRIVACY",
+    "voice": [
+      {
+        "file": "voice/10-00.mp3",
+        "start": 0.65,
+        "duration": 3.387542,
+        "zh": "方案默认在设备内处理，不保存原始录音。",
+        "en": "The proposed default is local processing without saving raw recordings."
+      },
+      {
+        "file": "voice/10-01.mp3",
+        "start": 4.261,
+        "duration": 4.21775,
+        "zh": "若启用事件历史，只保留类别与时间，并由用户管理。",
+        "en": "If event history is enabled, keep category and time under user control."
+      },
+      {
+        "file": "voice/10-02.mp3",
+        "start": 8.702,
+        "duration": 3.447708,
+        "zh": "这些隐私目标，仍需在最终软硬件中落实。",
+        "en": "These privacy goals must be implemented in the final hardware and software."
+      }
+    ]
+  },
+  {
+    "name": "Closing",
+    "duration": 10,
+    "start": 140,
+    "title": "科技的温度，是把选择交还给你",
+    "en": "TECHNOLOGY, WITH HUMANITY",
+    "voice": [
+      {
+        "file": "voice/11-00.mp3",
+        "start": 0.65,
+        "duration": 4.825958,
+        "zh": "下一步，与聋人及重听人士共同设计、测试、完善。",
+        "en": "Next: co-design, test and refine with deaf and hard-of-hearing people."
+      },
+      {
+        "file": "voice/11-01.mp3",
+        "start": 5.713,
+        "duration": 3.437125,
+        "zh": "SoundBridge。感知连接，自主回应。",
+        "en": "SoundBridge. Feel connected. Choose your response."
+      }
+    ]
+  }
+]

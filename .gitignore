@@ -3,3 +3,7 @@
 .env.*
 !.env.example
 node_modules/
+
+SoundBridge_Film/.venv/
+SoundBridge_Film/qa/
+soundbridge-film/build/

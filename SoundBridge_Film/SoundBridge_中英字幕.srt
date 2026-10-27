@@ -1,0 +1,169 @@
+1
+00:00:00,650 --> 00:00:04,058
+有些重要的时刻，从一个声音开始。
+Some meaningful moments begin with a sound.
+
+2
+00:00:04,196 --> 00:00:08,060
+一声门铃，一句问候，一次擦肩而过。
+A doorbell. A greeting. Someone passing by.
+
+3
+00:00:08,198 --> 00:00:11,270
+让这些连接，被更多人感知。
+Make those connections easier to notice.
+
+4
+00:00:12,650 --> 00:00:16,970
+SoundBridge，构想一款独立运行的声音感知手表。
+SoundBridge imagines a standalone sound-aware watch.
+
+5
+00:00:17,286 --> 00:00:21,270
+采集、识别、提醒，都在腕上完成。
+Sensing, recognition and alerts — all on the wrist.
+
+6
+00:00:22,650 --> 00:00:27,081
+麦克风采集声音，将短时音频转换为频谱特征。
+Microphones capture audio; short windows become spectral features.
+
+7
+00:00:27,189 --> 00:00:32,012
+轻量模型在本地，区分门铃、人声、车铃和鸣笛。
+A local model distinguishes doorbells, speech, bicycle bells and horns.
+
+8
+00:00:32,120 --> 00:00:37,270
+再通过置信度判断、连续确认与重复抑制，减少无效打扰。
+Confidence checks, temporal confirmation and deduplication limit unwanted alerts.
+
+9
+00:00:38,650 --> 00:00:43,813
+门铃响起，识别结果触发专属振动，屏幕显示门铃事件。
+A recognized doorbell triggers its haptic pattern and an on-screen event.
+
+10
+00:00:43,930 --> 00:00:49,270
+即使正在忙碌，也能知道有人来访。何时回应，由你决定。
+Notice a visitor while you are busy. Choose when to respond.
+
+11
+00:00:50,650 --> 00:00:54,311
+开启交谈模式，系统优先提醒附近的人声。
+Conversation mode prioritizes nearby speech.
+
+12
+00:00:54,416 --> 00:00:57,419
+一次轻柔长振，提醒你抬头看看。
+One gentle, sustained pulse invites you to look up.
+
+13
+00:00:57,524 --> 00:01:01,270
+它提示有人说话，不判断对方是否正在叫你。
+It detects speech, not whether someone is addressing you.
+
+14
+00:01:02,650 --> 00:01:06,903
+户外模式关注车铃与鸣笛，识别后发送短促振动。
+Outdoor mode focuses on bicycle bells and horns, with brief pulses.
+
+15
+00:01:07,008 --> 00:01:10,358
+停一停，看看周围，再由自己判断下一步。
+Pause, look around, and decide your next move.
+
+16
+00:01:10,463 --> 00:01:13,270
+这是环境提示，不替代道路观察。
+An awareness cue that does not replace looking around.
+
+17
+00:01:14,650 --> 00:01:17,393
+事件类别，映射到不同的振动节奏。
+Each event category maps to a different haptic rhythm.
+
+18
+00:01:17,494 --> 00:01:21,965
+门铃是两组双击，人声是一段长振，交通提示是三次短振。
+Doorbell: two paired taps. Speech: one long pulse. Traffic: three short taps.
+
+19
+00:01:22,066 --> 00:01:25,270
+驱动触觉马达，让声音有了可学习的触感。
+A haptic actuator turns sound categories into learnable sensations.
+
+20
+00:01:26,650 --> 00:01:29,835
+方向提示，需要兼容的多麦克风硬件。
+Direction cues require compatible multi-microphone hardware.
+
+21
+00:01:29,936 --> 00:01:33,559
+比较声音到达不同麦克风的时间差，估计来向。
+Compare arrival times across microphones to estimate the source direction.
+
+22
+00:01:33,661 --> 00:01:36,644
+表盘用柔和扇区，提示大致方向。
+A soft sector indicates an approximate direction.
+
+23
+00:01:36,746 --> 00:01:40,270
+精度仍需在真实噪声和佩戴条件下验证。
+Accuracy still needs validation with real noise and wrist placement.
+
+24
+00:01:41,650 --> 00:01:46,020
+首次使用，开启感知，选择声音，再试一试振动。
+Start awareness, choose your sounds, then preview the vibration.
+
+25
+00:01:46,127 --> 00:01:50,686
+只接收选中的声音，文字大小与振动强度也能调整。
+Choose the sounds to receive, plus text size and vibration strength.
+
+26
+00:01:50,793 --> 00:01:54,270
+把偏好保存在本地，让提醒更适合自己。
+Store preferences locally so alerts fit your needs.
+
+27
+00:01:55,650 --> 00:01:59,864
+居家、交谈、户外，切换的是声音筛选规则。
+Home, conversation and outdoors apply different sound filters.
+
+28
+00:01:59,972 --> 00:02:03,800
+想安静时，暂停感知，停止采集与提醒。
+Pause awareness to stop capture and alerts when you want quiet.
+
+29
+00:02:03,908 --> 00:02:06,270
+准备好了，再轻触恢复。
+Tap to resume when you are ready.
+
+30
+00:02:07,650 --> 00:02:11,158
+方案默认在设备内处理，不保存原始录音。
+The proposed default is local processing without saving raw recordings.
+
+31
+00:02:11,261 --> 00:02:15,599
+若启用事件历史，只保留类别与时间，并由用户管理。
+If event history is enabled, keep category and time under user control.
+
+32
+00:02:15,702 --> 00:02:19,270
+这些隐私目标，仍需在最终软硬件中落实。
+These privacy goals must be implemented in the final hardware and software.
+
+33
+00:02:20,650 --> 00:02:25,596
+下一步，与聋人及重听人士共同设计、测试、完善。
+Next: co-design, test and refine with deaf and hard-of-hearing people.
+
+34
+00:02:25,713 --> 00:02:29,270
+SoundBridge。感知连接，自主回应。
+SoundBridge. Feel connected. Choose your response.

@@ -1,0 +1,240 @@
+[
+  {
+    "text": "有些重要的时刻，从一个声音开始。",
+    "startMs": 650,
+    "endMs": 4058,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "一声门铃，一句问候，一次擦肩而过。",
+    "startMs": 4196,
+    "endMs": 8060,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "让这些连接，被更多人感知。",
+    "startMs": 8198,
+    "endMs": 11270,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "SoundBridge，构想一款独立运行的声音感知手表。",
+    "startMs": 12650,
+    "endMs": 16970,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "采集、识别、提醒，都在腕上完成。",
+    "startMs": 17286,
+    "endMs": 21270,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "麦克风采集声音，将短时音频转换为频谱特征。",
+    "startMs": 22650,
+    "endMs": 27081,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "轻量模型在本地，区分门铃、人声、车铃和鸣笛。",
+    "startMs": 27189,
+    "endMs": 32012,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "再通过置信度判断、连续确认与重复抑制，减少无效打扰。",
+    "startMs": 32120,
+    "endMs": 37270,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "门铃响起，识别结果触发专属振动，屏幕显示门铃事件。",
+    "startMs": 38650,
+    "endMs": 43813,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "即使正在忙碌，也能知道有人来访。何时回应，由你决定。",
+    "startMs": 43930,
+    "endMs": 49270,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "开启交谈模式，系统优先提醒附近的人声。",
+    "startMs": 50650,
+    "endMs": 54311,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "一次轻柔长振，提醒你抬头看看。",
+    "startMs": 54416,
+    "endMs": 57419,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "它提示有人说话，不判断对方是否正在叫你。",
+    "startMs": 57524,
+    "endMs": 61270,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "户外模式关注车铃与鸣笛，识别后发送短促振动。",
+    "startMs": 62650,
+    "endMs": 66903,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "停一停，看看周围，再由自己判断下一步。",
+    "startMs": 67008,
+    "endMs": 70358,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "这是环境提示，不替代道路观察。",
+    "startMs": 70463,
+    "endMs": 73270,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "事件类别，映射到不同的振动节奏。",
+    "startMs": 74650,
+    "endMs": 77393,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "门铃是两组双击，人声是一段长振，交通提示是三次短振。",
+    "startMs": 77494,
+    "endMs": 81965,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "驱动触觉马达，让声音有了可学习的触感。",
+    "startMs": 82066,
+    "endMs": 85270,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "方向提示，需要兼容的多麦克风硬件。",
+    "startMs": 86650,
+    "endMs": 89835,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "比较声音到达不同麦克风的时间差，估计来向。",
+    "startMs": 89936,
+    "endMs": 93559,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "表盘用柔和扇区，提示大致方向。",
+    "startMs": 93661,
+    "endMs": 96644,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "精度仍需在真实噪声和佩戴条件下验证。",
+    "startMs": 96746,
+    "endMs": 100270,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "首次使用，开启感知，选择声音，再试一试振动。",
+    "startMs": 101650,
+    "endMs": 106020,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "只接收选中的声音，文字大小与振动强度也能调整。",
+    "startMs": 106127,
+    "endMs": 110686,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "把偏好保存在本地，让提醒更适合自己。",
+    "startMs": 110793,
+    "endMs": 114270,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "居家、交谈、户外，切换的是声音筛选规则。",
+    "startMs": 115650,
+    "endMs": 119864,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "想安静时，暂停感知，停止采集与提醒。",
+    "startMs": 119972,
+    "endMs": 123800,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "准备好了，再轻触恢复。",
+    "startMs": 123908,
+    "endMs": 126270,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "方案默认在设备内处理，不保存原始录音。",
+    "startMs": 127650,
+    "endMs": 131158,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "若启用事件历史，只保留类别与时间，并由用户管理。",
+    "startMs": 131261,
+    "endMs": 135599,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "这些隐私目标，仍需在最终软硬件中落实。",
+    "startMs": 135702,
+    "endMs": 139270,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "下一步，与聋人及重听人士共同设计、测试、完善。",
+    "startMs": 140650,
+    "endMs": 145596,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "SoundBridge。感知连接，自主回应。",
+    "startMs": 145713,
+    "endMs": 149270,
+    "timestampMs": null,
+    "confidence": null
+  }
+]
