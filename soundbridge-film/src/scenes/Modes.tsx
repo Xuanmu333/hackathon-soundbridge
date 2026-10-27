@@ -1,6 +1,8 @@
+import {TechAtmosphere} from '../technology';
 import {useCurrentFrame} from 'remotion';
 import {Scene,Title,Watch,Waves,C,Tap,Note} from '../visuals';
 export const Modes=()=>{const f=useCurrentFrame();const paused=f>=150&&f<280;const m=f<90?0:1;return <Scene id={9}>
+ <TechAtmosphere/>
  <Title kicker="09 / CONTROL STAYS WITH YOU" title={'开启与暂停，\n都由你掌握。'} width={1000}/>
  <div style={{position:'absolute',left:100,top:430,display:'flex',gap:20}}>{['居家','户外'].map((t,i)=><div key={t} style={{fontSize:32,padding:'18px 42px',borderRadius:15,background:m===i?'#174452':'#13232e',border:`1px solid ${m===i?C.cyan:'#30424e'}`}}>{t}</div>)}</div>
  <div style={{position:'absolute',left:108,top:540,fontSize:27,color:C.muted}}>{['门铃优先','车铃 + 鸣笛'][m]} / Selected sound filters</div>

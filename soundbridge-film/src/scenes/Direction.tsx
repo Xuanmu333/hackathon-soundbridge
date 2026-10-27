@@ -1,17 +1,23 @@
 import {useCurrentFrame} from 'remotion';
-import {Scene,Title,Watch,Icon,C,Note} from '../visuals';
-export const Direction=()=>{const f=useCurrentFrame();const uncertain=f>=245;const angle=-60;return <Scene id={5}>
- <Title kicker="05 / DIRECTION WITH UNCERTAINTY" title={'来向，\n只作辅助线索。'} width={1200}/>
- <svg width="970" height="410" style={{position:'absolute',left:100,top:430}}>
-  {[80,145,210,275,340].map((r,i)=><circle key={i} cx="120" cy="180" r={r+(f%35)} stroke={C.cyan} fill="none" opacity={.3-i*.045}/>)}
-  <path d="M120 180 700 90M120 180 700 280" stroke="#64e8eb77" strokeDasharray="8 10" fill="none"/>
-  <rect x="650" y="40" width="250" height="300" rx="35" fill="#102632" stroke="#466876"/>
-  <circle cx="690" cy="90" r="13" fill={C.cyan}/><circle cx="690" cy="280" r="13" fill={C.blue}/>
-  <text x="730" y="100" fill={C.cyan} fontSize="26">Mic A</text><text x="730" y="290" fill={C.blue} fontSize="26">Mic B</text>
-  <text x="720" y="205" fill="#e7f7fa" fontSize="40">Δt</text>
-  <text x="360" y="385" fill="#9ab3c0" fontSize="25">到达时间差 → 来向估计</text>
+import {Scene,Watch,Icon,C,Note} from '../visuals';
+import {TechHeading,OrbitField,StageRail} from '../technology';
+export const Direction=()=>{const f=useCurrentFrame(),uncertain=f>=245;const sensors=[[1100,440],[1330,280],[1630,440],[1450,740]];return <Scene id={5}>
+ <div style={{position:'absolute',left:700,top:110,width:1220,height:780,background:'radial-gradient(ellipse,#103c5355,transparent 67%)'}}/>
+ <OrbitField x={1370} y={530} r={370} dim={uncertain}/>
+ <svg width="1920" height="900" style={{position:'absolute',inset:0}}>
+ <defs><linearGradient id="sound-volume" x1="0" y1="0" x2="1" y2="1"><stop stopColor={C.cyan} stopOpacity=".22"/><stop offset="1" stopColor={C.cyan} stopOpacity="0"/></linearGradient></defs>
+ {!uncertain&&<><path d="M950 290 L1630 440 L1450 740 Z" fill="url(#sound-volume)"/>{[0,1,2,3,4].map(i=><ellipse key={i} cx={960+i*74+(f%60)*1.2} cy={300+i*40} rx={25+i*30} ry={60+i*30} fill="none" stroke={C.cyan} opacity={.25-i*.035} transform={`rotate(-35 ${960+i*74+(f%60)*1.2} ${300+i*40})`}/>)}</>}
+ {sensors.map(([x,y],i)=><g key={i}><path d={`M950 290 L${x} ${y}`} stroke={uncertain?'#304653':C.cyan} strokeDasharray="3 12" strokeDashoffset={-f*2-i*9} opacity={uncertain?.1:.35}/><circle cx={x} cy={y} r="15" fill="#091e29" stroke={uncertain?C.muted:C.cyan}/><circle cx={x} cy={y} r="5" fill={uncertain?C.muted:C.cyan}/><text x={x+25} y={y+7} fill={C.muted} fontSize="21">MIC {String.fromCharCode(65+i)}</text></g>)}
+ {Array.from({length:13},(_,row)=>Array.from({length:32},(_,col)=>{const lat=(row/12-.5)*Math.PI;const lon=col/32*Math.PI*2+f*.0025;const x=Math.cos(lat)*Math.cos(lon)*335,z=Math.cos(lat)*Math.sin(lon)*335,y=Math.sin(lat)*335;const depth=1+z/1500;return <circle key={row+'-'+col} cx={1370+x/depth} cy={520+(y*.92-z*.22)/depth} r={z>0?1.2:2} fill={C.cyan} opacity={(uncertain?.1:.22)+(1-z/335)*(uncertain?.035:.2)}/>;}))}
+ <ellipse cx="1370" cy="530" rx="190" ry="340" fill="none" stroke={C.cyan} opacity=".14" transform="rotate(25 1370 530)"/>
+ <ellipse cx="1370" cy="530" rx="125" ry="340" fill="none" stroke={C.cyan} opacity=".1" transform="rotate(-25 1370 530)"/>
  </svg>
- <div style={{position:'absolute',left:181,top:565}}><Icon kind="wave" size={80}/></div>
- <Watch x={1300} y={385} size={390} label={uncertain?'方向不确定':'大致来向'} sub={uncertain?'请观察周围':'相对手表 / Relative to watch'} kind="bike" bearing={uncertain?undefined:angle}/>
- <Note text="需硬件与校准验证 · 不可靠时不显示方向扇区 · 不保证避险"/>
+ <TechHeading eyebrow="05 / SPATIAL SOUND FIELD" title={'感知来向，\n理解不确定性。'} sub="多麦克风 / 到达时间差 / 相对来向"/>
+ <div style={{position:'absolute',left:105,top:480,fontSize:100,fontWeight:200,color:uncertain?C.warm:C.cyan,letterSpacing:-4}}>{uncertain?'?':'Δt'}</div>
+ <div style={{position:'absolute',left:110,top:625,fontSize:35,color:uncertain?C.warm:C.white}}>{uncertain?'方向不确定 · 请观察周围':'比较声音抵达各麦克风的时间'}</div>
+ <div style={{position:'absolute',left:110,top:692,fontSize:25,color:C.muted}}>相对手表的辅助线索</div>
+ {!uncertain&&<div style={{position:'absolute',left:918,top:243}}><Icon kind="wave" size={52}/></div>}
+ <Watch x={1220} y={370} size={300} label={uncertain?'方向不确定':'大致来向'} sub={uncertain?'请观察周围':'相对手表'} kind="bike" bearing={uncertain?undefined:-60} active={false}/>
+ <StageRail items={['多点采集','时间差估计','来向判断','不确定状态']} active={uncertain?3:Math.min(2,Math.floor(f/85))}/>
+ <Note text="空间声场与阵列为结构示意 · 需真实佩戴与噪声测试 · 不保证避险" y={853}/>
  </Scene>};
