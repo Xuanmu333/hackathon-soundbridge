@@ -1,0 +1,341 @@
+[
+  {
+    "name": "Opening",
+    "duration": 12,
+    "title": "她的日常，由她掌握",
+    "en": "HER DAY. HER OWN PACE.",
+    "start": 0,
+    "voice": [
+      {
+        "file": "voice-story/00-00-0fa1de58.mp3",
+        "start": 0.55,
+        "duration": 3.093083,
+        "zh": "听障使用者小林，正在去见朋友。",
+        "en": "Xiaolin, a deaf or hard-of-hearing user, is on her way to meet a friend."
+      },
+      {
+        "file": "voice-story/00-01-dc28b206.mp3",
+        "start": 3.852,
+        "duration": 4.465958,
+        "zh": "她希望独自出行时，也能及时察觉身后的环境线索。",
+        "en": "She wants to notice important cues behind her while travelling independently."
+      },
+      {
+        "file": "voice-story/00-02-d10eb48c.mp3",
+        "start": 8.527,
+        "duration": 2.772667,
+        "zh": "SoundBridge，让声音成为触觉。",
+        "en": "SoundBridge turns sound cues into touch."
+      }
+    ]
+  },
+  {
+    "name": "Outdoors",
+    "duration": 15,
+    "title": "车铃在身后，线索抵达手腕",
+    "en": "FROM A SOUND BEHIND HER TO A CUE ON HER WRIST",
+    "start": 12,
+    "voice": [
+      {
+        "file": "voice-story/01-00-1ee039d7.mp3",
+        "start": 0.55,
+        "duration": 4.986083,
+        "zh": "共享步道上，车铃从左后方传来。小林的目光仍然朝前。",
+        "en": "A bicycle bell rings behind her on the left. Her attention is on the path ahead."
+      },
+      {
+        "file": "voice-story/01-01-e193df06.mp3",
+        "start": 5.743,
+        "duration": 4.165,
+        "zh": "声波抵达手表，四个麦克风先后接收同一次声音。",
+        "en": "The sound reaches the watch. Four microphones receive the same event at different times."
+      },
+      {
+        "file": "voice-story/01-02-fa2acd24.mp3",
+        "start": 10.114,
+        "duration": 4.185958,
+        "zh": "手表开始识别，让看不见的声音有了可感知的入口。",
+        "en": "Recognition begins, giving an unseen sound a perceptible form."
+      }
+    ]
+  },
+  {
+    "name": "Recognition",
+    "duration": 12,
+    "title": "把声音，变成可以理解的线索",
+    "en": "RECOGNIZE THE SOUND. MAKE THE CUE CLEAR.",
+    "start": 27,
+    "voice": [
+      {
+        "file": "voice-story/02-00-2ad5f798.mp3",
+        "start": 0.55,
+        "duration": 3.637292,
+        "zh": "收音信号转换为频谱特征，端侧模型识别出车铃。",
+        "en": "Audio is converted into spectral features. An on-device model identifies the bicycle bell."
+      },
+      {
+        "file": "voice-story/02-01-8a282170.mp3",
+        "start": 4.386,
+        "duration": 3.568208,
+        "zh": "分类确认后，系统把声音类别与来向交给提醒模块。",
+        "en": "Once confirmed, the sound class and direction are passed to the alert module."
+      },
+      {
+        "file": "voice-story/02-02-166fcc9f.mp3",
+        "start": 8.152,
+        "duration": 3.147667,
+        "zh": "从外部声音，到腕上的线索，处理在本地完成。",
+        "en": "From sound to a cue on the wrist, processing stays local."
+      }
+    ]
+  },
+  {
+    "name": "Direction",
+    "duration": 22,
+    "title": "四个收音点，共同判断来向",
+    "en": "FOUR MICROPHONES. ONE DIRECTIONAL CUE.",
+    "start": 39,
+    "voice": [
+      {
+        "file": "voice-story/03-00-a35ccca2.mp3",
+        "start": 0.55,
+        "duration": 4.6285,
+        "zh": "四个麦克风的位置不同，声音到达的时间也有细微差异。",
+        "en": "The four microphones occupy different positions, so sound reaches them at slightly different times."
+      },
+      {
+        "file": "voice-story/03-01-51ddc3b6.mp3",
+        "start": 5.384,
+        "duration": 4.716,
+        "zh": "比较四路信号的先后，阵列估算声音相对手表的来向。",
+        "en": "Comparing the four arrival times estimates direction relative to the watch."
+      },
+      {
+        "file": "voice-story/03-02-947b1d96.mp3",
+        "start": 10.305,
+        "duration": 5.961708,
+        "zh": "左后方、左前方、右前方、右后方，表盘的指针和角度同步变化。",
+        "en": "Rear left, front left, front right, rear right: the dial pointer and angle move together."
+      },
+      {
+        "file": "voice-story/03-03-e30454ef.mp3",
+        "start": 16.472,
+        "duration": 4.827542,
+        "zh": "来向不明确时，只显示声音类别，让她自己观察确认。",
+        "en": "If direction is unclear, show the sound class and let her check her surroundings."
+      }
+    ]
+  },
+  {
+    "name": "Haptics",
+    "duration": 12,
+    "title": "三次短振，她抬腕查看",
+    "en": "A TACTILE CUE. A GLANCE AT THE WRIST.",
+    "start": 61,
+    "voice": [
+      {
+        "file": "voice-story/04-00-8184eb1c.mp3",
+        "start": 0.55,
+        "duration": 3.559542,
+        "zh": "小林的手腕感到三次短振，她抬腕查看。",
+        "en": "Xiaolin feels three short pulses and glances at her watch."
+      },
+      {
+        "file": "voice-story/04-01-909c44f1.mp3",
+        "start": 4.316,
+        "duration": 3.749792,
+        "zh": "表盘同时显示车铃、角度和方位文字。",
+        "en": "The dial shows the bell, its approximate angle and a direction label."
+      },
+      {
+        "file": "voice-story/04-02-5e1a27a9.mp3",
+        "start": 8.272,
+        "duration": 3.02825,
+        "zh": "声音不必成为她回应环境的唯一入口。",
+        "en": "Hearing does not have to be her only way to notice the world."
+      }
+    ]
+  },
+  {
+    "name": "Response",
+    "duration": 12,
+    "title": "确认周围，再继续自己的路",
+    "en": "CHECK. DECIDE. CONTINUE.",
+    "start": 73,
+    "voice": [
+      {
+        "file": "voice-story/05-00-f7b91e0b.mp3",
+        "start": 0.55,
+        "duration": 3.740083,
+        "zh": "有了来向线索，她转头观察，确认骑行者的位置。",
+        "en": "With a directional cue, she looks around and locates the cyclist."
+      },
+      {
+        "file": "voice-story/05-01-a351b497.mp3",
+        "start": 4.494,
+        "duration": 3.758583,
+        "zh": "她在步道一侧让出空间，等对方通过，再继续前行。",
+        "en": "She makes space at the side, lets the rider pass, then continues."
+      },
+      {
+        "file": "voice-story/05-02-e9ff0120.mp3",
+        "start": 8.456,
+        "duration": 2.844083,
+        "zh": "手表提供线索，行动由她自己决定。",
+        "en": "The watch provides a cue. The decision remains hers."
+      }
+    ]
+  },
+  {
+    "name": "Personalize",
+    "duration": 12,
+    "title": "提醒，适合她自己的感受",
+    "en": "SET THE CUE TO SUIT HER.",
+    "start": 85,
+    "voice": [
+      {
+        "file": "voice-story/06-00-8226e811.mp3",
+        "start": 0.55,
+        "duration": 2.792083,
+        "zh": "适合自己的提醒，才容易被理解。",
+        "en": "A cue that suits the person is easier to understand."
+      },
+      {
+        "file": "voice-story/06-01-1ee5549c.mp3",
+        "start": 3.547,
+        "duration": 4.2035,
+        "zh": "她选择关注的声音，调节振动强度，也可以放大文字。",
+        "en": "She chooses sounds, adjusts vibration strength and can enlarge the text."
+      },
+      {
+        "file": "voice-story/06-02-e9f1b983.mp3",
+        "start": 7.955,
+        "duration": 3.345167,
+        "zh": "左侧选中的设置，会立即呈现在手表上。",
+        "en": "Each selected control is reflected immediately on the watch."
+      }
+    ]
+  },
+  {
+    "name": "Home",
+    "duration": 15,
+    "title": "门铃响起，也能从容回应",
+    "en": "NOTICE A VISITOR. RESPOND IN HER OWN TIME.",
+    "start": 97,
+    "voice": [
+      {
+        "file": "voice-story/07-00-841663ea.mp3",
+        "start": 0.55,
+        "duration": 4.608,
+        "zh": "回到家，小林正专注于手里的事情，门铃响起。",
+        "en": "At home, Xiaolin is focused on what she is doing when the doorbell rings."
+      },
+      {
+        "file": "voice-story/07-01-bd679bad.mp3",
+        "start": 5.349,
+        "duration": 4.488,
+        "zh": "两组双振和门铃文字，让来访信息抵达手腕。",
+        "en": "Two paired pulses and a doorbell label bring the visitor cue to her wrist."
+      },
+      {
+        "file": "voice-story/07-02-f6f6a116.mp3",
+        "start": 10.028,
+        "duration": 4.272,
+        "zh": "她可以从容地结束手头的事，再决定何时回应。",
+        "en": "She can finish what she is doing and choose when to respond."
+      }
+    ]
+  },
+  {
+    "name": "Structure",
+    "duration": 14,
+    "title": "一份提醒，来自部件之间的协作",
+    "en": "AN ALERT, BUILT BY WORKING TOGETHER.",
+    "start": 112,
+    "voice": [
+      {
+        "file": "voice-story/08-00-bd281e5b.mp3",
+        "start": 0.55,
+        "duration": 3.250875,
+        "zh": "这份提醒，来自表壳内各个部件的协作。",
+        "en": "This cue is created by components working together inside the case."
+      },
+      {
+        "file": "voice-story/08-01-d9381790.mp3",
+        "start": 4.006,
+        "duration": 4.94875,
+        "zh": "收音阵列、处理电路、显示模组和触觉马达，逐层展开。",
+        "en": "The microphone array, processing board, display and haptic actuator separate into layers."
+      },
+      {
+        "file": "voice-story/08-02-2ecbac7a.mp3",
+        "start": 9.161,
+        "duration": 4.13925,
+        "zh": "看清信号如何流动后，部件沿原来的位置平稳收回。",
+        "en": "After revealing the signal path, the layers settle smoothly back into place."
+      }
+    ]
+  },
+  {
+    "name": "Modes",
+    "duration": 10,
+    "title": "开启与暂停，都由她决定",
+    "en": "CONTROL STAYS WITH HER.",
+    "start": 126,
+    "voice": [
+      {
+        "file": "voice-story/09-00-cb5cd669.mp3",
+        "start": 0.55,
+        "duration": 3.985958,
+        "zh": "她也可以暂停监听，为自己留一段安静的时间。",
+        "en": "She can also pause listening and take time for herself."
+      },
+      {
+        "file": "voice-story/09-01-ac346432.mp3",
+        "start": 4.756,
+        "duration": 4.54375,
+        "zh": "暂停状态持续可见；准备好了，再由她主动恢复。",
+        "en": "The paused state stays visible. She chooses when to resume."
+      }
+    ]
+  },
+  {
+    "name": "Privacy",
+    "duration": 6,
+    "title": "私人的日常，留在自己的掌控中",
+    "en": "HER EVERYDAY LIFE. HER CONTROL.",
+    "start": 136,
+    "voice": [
+      {
+        "file": "voice-story/10-00-cd1e74ac.mp3",
+        "start": 0.55,
+        "duration": 4.729958,
+        "zh": "声音在本地处理，私人的日常，留在自己的掌控中。",
+        "en": "Sound is processed locally, keeping her everyday life under her control."
+      }
+    ]
+  },
+  {
+    "name": "Closing",
+    "duration": 8,
+    "title": "更从容地，过自己的生活",
+    "en": "MORE CONFIDENCE IN EVERYDAY LIFE.",
+    "start": 142,
+    "voice": [
+      {
+        "file": "voice-story/11-00-c07f22e1.mp3",
+        "start": 0.55,
+        "duration": 3.854958,
+        "zh": "从独自出门，到与朋友相聚，生活按自己的节奏展开。",
+        "en": "From heading out alone to meeting a friend, life moves at her own pace."
+      },
+      {
+        "file": "voice-story/11-01-798c0347.mp3",
+        "start": 4.615,
+        "duration": 2.684875,
+        "zh": "SoundBridge，让重要的线索，被感知。",
+        "en": "SoundBridge. Make important cues perceptible."
+      }
+    ]
+  }
+]

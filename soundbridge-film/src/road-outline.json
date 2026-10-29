@@ -1,0 +1,206 @@
+[
+  {
+    "name": "Opening",
+    "duration": 12,
+    "title": "让听障人士，及时感知路上的线索",
+    "en": "ENVIRONMENTAL AWARENESS FOR DEAF AND HARD-OF-HEARING PEOPLE",
+    "lines": [
+      {
+        "zh": "小林是一位听障人士，正在独自出行。",
+        "en": "Xiaolin is deaf or hard of hearing and is travelling independently."
+      },
+      {
+        "zh": "SoundBridge，把重要的环境声音，转化为腕上的提醒。",
+        "en": "SoundBridge turns important environmental sounds into cues on her wrist."
+      },
+      {
+        "zh": "这一次，我们跟随她走过一段日常道路。",
+        "en": "Follow her along an everyday journey."
+      }
+    ]
+  },
+  {
+    "name": "Approach",
+    "duration": 9,
+    "title": "身后的车铃，抵达手腕",
+    "en": "A BELL BEHIND HER. A CUE ON HER WRIST.",
+    "lines": [
+      {
+        "zh": "骑行者从左后方接近，车铃响起。",
+        "en": "A cyclist approaches from behind on the left and rings a bell."
+      },
+      {
+        "zh": "四个麦克风接收声音，识别车铃后，发出三次短振。",
+        "en": "Four microphones capture the sound. Recognizing the bicycle bell triggers three short pulses."
+      }
+    ]
+  },
+  {
+    "name": "Respond",
+    "duration": 9,
+    "title": "抬腕查看，转头确认",
+    "en": "FEEL. CHECK. LOOK AROUND.",
+    "lines": [
+      {
+        "zh": "三次短振引起注意，小林抬腕查看类别和来向。",
+        "en": "Three short pulses get her attention. Xiaolin checks the sound class and direction on her wrist."
+      },
+      {
+        "zh": "她转头确认，靠边让行，等骑行者通过。",
+        "en": "She looks around, moves aside and lets the cyclist pass."
+      }
+    ]
+  },
+  {
+    "name": "Array",
+    "duration": 18,
+    "title": "四路信号，共同判断来向",
+    "en": "FOUR SIGNALS. A DIRECTIONAL CUE.",
+    "lines": [
+      {
+        "zh": "手表上的四个麦克风，位于不同的位置。",
+        "en": "Four microphones sit at different positions on the watch."
+      },
+      {
+        "zh": "比较同一次声音到达的微小时差，可以估算声音的来向。",
+        "en": "Tiny differences in arrival time help estimate where the sound came from."
+      },
+      {
+        "zh": "骑行者从左后方经过左前方，空间位置与表盘角度同步变化。",
+        "en": "As the cyclist moves from rear left to front left, the source position and dial angle change together."
+      }
+    ]
+  },
+  {
+    "name": "Crossing",
+    "duration": 12,
+    "title": "路口的鸣笛，提醒她留意车辆",
+    "en": "NOTICE THE VEHICLE AT THE CROSSING.",
+    "lines": [
+      {
+        "zh": "来到路口，一辆车从右前方驶来。",
+        "en": "At a crossing, a vehicle approaches from the front right."
+      },
+      {
+        "zh": "识别鸣笛后，两次长振提醒她，表盘显示类别和来向。",
+        "en": "Recognizing the horn triggers two long pulses. The dial shows the sound class and direction."
+      },
+      {
+        "zh": "收到振动后，她抬腕查看，在路缘内停步观察。",
+        "en": "Feeling the vibration, she checks her watch and stops before the curb."
+      }
+    ]
+  },
+  {
+    "name": "Wait",
+    "duration": 10,
+    "title": "先观察，等车辆通过",
+    "en": "LOOK FIRST. LET THE VEHICLE PASS.",
+    "lines": [
+      {
+        "zh": "看清车辆的行进方向，她留在安全的位置等待。",
+        "en": "She checks the vehicle direction and waits in a safe position."
+      },
+      {
+        "zh": "等车辆通过，确认道路情况，再继续前行。",
+        "en": "After it passes, she checks the road and continues."
+      }
+    ]
+  },
+  {
+    "name": "Bearing",
+    "duration": 18,
+    "title": "类别与方向，让提醒更清楚",
+    "en": "KNOW THE SOUND. UNDERSTAND ITS DIRECTION.",
+    "lines": [
+      {
+        "zh": "声音类别告诉她，发生了什么；来向提示帮助她决定往哪里看。",
+        "en": "The sound class explains what happened. Direction helps her decide where to look."
+      },
+      {
+        "zh": "表盘同时呈现角度、文字和指示标记，减少理解的负担。",
+        "en": "Angles, text and a pointer make the cue easier to understand."
+      },
+      {
+        "zh": "触觉引起注意，视觉补充信息，最后由她观察和判断。",
+        "en": "Touch gets her attention. Visual cues add context. She observes and decides."
+      }
+    ]
+  },
+  {
+    "name": "Personalize",
+    "duration": 16,
+    "title": "在安全位置，调整适合自己的提醒",
+    "en": "PERSONALIZE THE CUE IN A SAFE PLACE.",
+    "lines": [
+      {
+        "zh": "在步道旁停稳后，小林调整手表的提醒方式。",
+        "en": "Stopped safely beside the path, Xiaolin adjusts her watch."
+      },
+      {
+        "zh": "振动强度和文字大小，按照她的感受来设置。",
+        "en": "She sets vibration strength and text size to suit her."
+      },
+      {
+        "zh": "让每一次提醒清楚而舒适，帮助她从容关注周围。",
+        "en": "Clear, comfortable cues help her stay aware of her surroundings."
+      }
+    ]
+  },
+  {
+    "name": "Structure",
+    "duration": 22,
+    "title": "一份安全线索，来自内部协作",
+    "en": "INSIDE EVERY CUE, COMPONENTS WORK TOGETHER.",
+    "lines": [
+      {
+        "zh": "她继续行走时，我们看看手表内部如何协作。",
+        "en": "As she continues walking, we look inside the watch."
+      },
+      {
+        "zh": "麦克风收集信号，处理电路识别声音，显示模组和触觉马达传达提醒。",
+        "en": "Microphones capture signals. The board identifies sounds. The display and haptic actuator deliver the cue."
+      },
+      {
+        "zh": "部件平稳展开，再沿原位收回。技术的目的，是让重要线索及时被感知。",
+        "en": "The layers separate smoothly and return to place. Their purpose is to make important cues perceptible."
+      }
+    ]
+  },
+  {
+    "name": "RearAlert",
+    "duration": 16,
+    "title": "再次接近，也能及时察觉",
+    "en": "NOTICE ANOTHER APPROACH FROM BEHIND.",
+    "lines": [
+      {
+        "zh": "另一位骑行者从右后方接近，手表再次识别车铃。",
+        "en": "Another cyclist approaches from behind on the right. The watch identifies the bell."
+      },
+      {
+        "zh": "短振与右后方提示出现，小林抬腕，转头观察。",
+        "en": "Short pulses and a rear-right cue appear. Xiaolin checks her wrist and looks around."
+      },
+      {
+        "zh": "她让出空间，保持对周围的警觉，等待对方通过。",
+        "en": "She makes space, stays aware of her surroundings and lets the rider pass."
+      }
+    ]
+  },
+  {
+    "name": "Closing",
+    "duration": 8,
+    "title": "让听障人士，更从容地出行",
+    "en": "MORE AWARENESS. MORE INDEPENDENCE.",
+    "lines": [
+      {
+        "zh": "安全感，来自及时的线索，也来自自己的判断。",
+        "en": "Confidence comes from timely cues and her own judgment."
+      },
+      {
+        "zh": "SoundBridge，为听障人士设计的环境感知手表。",
+        "en": "SoundBridge. An environmental awareness watch for deaf and hard-of-hearing people."
+      }
+    ]
+  }
+]

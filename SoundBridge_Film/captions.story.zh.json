@@ -1,0 +1,233 @@
+[
+  {
+    "text": "听障使用者小林，正在去见朋友。",
+    "startMs": 550,
+    "endMs": 3763,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "她希望独自出行时，也能及时察觉身后的环境线索。",
+    "startMs": 3852,
+    "endMs": 8438,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "SoundBridge，让声音成为触觉。",
+    "startMs": 8527,
+    "endMs": 11420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "共享步道上，车铃从左后方传来。小林的目光仍然朝前。",
+    "startMs": 12550,
+    "endMs": 17656,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "声波抵达手表，四个麦克风先后接收同一次声音。",
+    "startMs": 17743,
+    "endMs": 22028,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "手表开始识别，让看不见的声音有了可感知的入口。",
+    "startMs": 22114,
+    "endMs": 26420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "收音信号转换为频谱特征，端侧模型识别出车铃。",
+    "startMs": 27550,
+    "endMs": 31307,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "分类确认后，系统把声音类别与来向交给提醒模块。",
+    "startMs": 31386,
+    "endMs": 35074,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "从外部声音，到腕上的线索，处理在本地完成。",
+    "startMs": 35152,
+    "endMs": 38420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "四个麦克风的位置不同，声音到达的时间也有细微差异。",
+    "startMs": 39550,
+    "endMs": 44298,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "比较四路信号的先后，阵列估算声音相对手表的来向。",
+    "startMs": 44384,
+    "endMs": 49220,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "左后方、左前方、右前方、右后方，表盘的指针和角度同步变化。",
+    "startMs": 49305,
+    "endMs": 55387,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "来向不明确时，只显示声音类别，让她自己观察确认。",
+    "startMs": 55472,
+    "endMs": 60420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "小林的手腕感到三次短振，她抬腕查看。",
+    "startMs": 61550,
+    "endMs": 65230,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "表盘同时显示车铃、角度和方位文字。",
+    "startMs": 65316,
+    "endMs": 69186,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "声音不必成为她回应环境的唯一入口。",
+    "startMs": 69272,
+    "endMs": 72420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "有了来向线索，她转头观察，确认骑行者的位置。",
+    "startMs": 73550,
+    "endMs": 77410,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "她在步道一侧让出空间，等对方通过，再继续前行。",
+    "startMs": 77494,
+    "endMs": 81372,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "手表提供线索，行动由她自己决定。",
+    "startMs": 81456,
+    "endMs": 84420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "适合自己的提醒，才容易被理解。",
+    "startMs": 85550,
+    "endMs": 88462,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "她选择关注的声音，调节振动强度，也可以放大文字。",
+    "startMs": 88547,
+    "endMs": 92870,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "左侧选中的设置，会立即呈现在手表上。",
+    "startMs": 92955,
+    "endMs": 96420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "回到家，小林正专注于手里的事情，门铃响起。",
+    "startMs": 97550,
+    "endMs": 102278,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "两组双振和门铃文字，让来访信息抵达手腕。",
+    "startMs": 102349,
+    "endMs": 106957,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "她可以从容地结束手头的事，再决定何时回应。",
+    "startMs": 107028,
+    "endMs": 111420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "这份提醒，来自表壳内各个部件的协作。",
+    "startMs": 112550,
+    "endMs": 115921,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "收音阵列、处理电路、显示模组和触觉马达，逐层展开。",
+    "startMs": 116006,
+    "endMs": 121075,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "看清信号如何流动后，部件沿原来的位置平稳收回。",
+    "startMs": 121161,
+    "endMs": 125420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "她也可以暂停监听，为自己留一段安静的时间。",
+    "startMs": 126550,
+    "endMs": 130656,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "暂停状态持续可见；准备好了，再由她主动恢复。",
+    "startMs": 130756,
+    "endMs": 135420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "声音在本地处理，私人的日常，留在自己的掌控中。",
+    "startMs": 136550,
+    "endMs": 141400,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "从独自出门，到与朋友相聚，生活按自己的节奏展开。",
+    "startMs": 142550,
+    "endMs": 146525,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "SoundBridge，让重要的线索，被感知。",
+    "startMs": 146615,
+    "endMs": 149420,
+    "timestampMs": null,
+    "confidence": null
+  }
+]

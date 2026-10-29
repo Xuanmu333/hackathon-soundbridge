@@ -1,0 +1,205 @@
+[
+  {
+    "text": "小林是一位听障人士，正在独自出行。",
+    "startMs": 550,
+    "endMs": 3760,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "SoundBridge，把重要的环境声音，转化为腕上的提醒。",
+    "startMs": 3847,
+    "endMs": 7957,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "这一次，我们跟随她走过一段日常道路。",
+    "startMs": 8044,
+    "endMs": 11420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "骑行者从左后方接近，车铃响起。",
+    "startMs": 12550,
+    "endMs": 15533,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "四个麦克风接收声音，识别车铃后，发出三次短振。",
+    "startMs": 15632,
+    "endMs": 20420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "三次短振引起注意，小林抬腕查看类别和来向。",
+    "startMs": 21550,
+    "endMs": 25929,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "她转头确认，靠边让行，等骑行者通过。",
+    "startMs": 26025,
+    "endMs": 29420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "手表上的四个麦克风，位于不同的位置。",
+    "startMs": 30550,
+    "endMs": 34318,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "比较同一次声音到达的微小时差，可以估算声音的来向。",
+    "startMs": 35373,
+    "endMs": 40365,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "骑行者从左后方经过左前方，空间位置与表盘角度同步变化。",
+    "startMs": 41420,
+    "endMs": 47420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "来到路口，一辆车从右前方驶来。",
+    "startMs": 48550,
+    "endMs": 51069,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "识别鸣笛后，两次长振提醒她，表盘显示类别和来向。",
+    "startMs": 51155,
+    "endMs": 55935,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "收到振动后，她抬腕查看，在路缘内停步观察。",
+    "startMs": 56021,
+    "endMs": 59420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "看清车辆的行进方向，她留在安全的位置等待。",
+    "startMs": 60550,
+    "endMs": 64990,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "等车辆通过，确认道路情况，再继续前行。",
+    "startMs": 65148,
+    "endMs": 69420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "声音类别告诉她，发生了什么；来向提示帮助她决定往哪里看。",
+    "startMs": 70550,
+    "endMs": 76467,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "表盘同时呈现角度、文字和指示标记，减少理解的负担。",
+    "startMs": 76541,
+    "endMs": 82073,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "触觉引起注意，视觉补充信息，最后由她观察和判断。",
+    "startMs": 82147,
+    "endMs": 87420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "在步道旁停稳后，小林调整手表的提醒方式。",
+    "startMs": 88550,
+    "endMs": 92942,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "振动强度和文字大小，按照她的感受来设置。",
+    "startMs": 93549,
+    "endMs": 97965,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "让每一次提醒清楚而舒适，帮助她从容关注周围。",
+    "startMs": 98572,
+    "endMs": 103420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "她继续行走时，我们看看手表内部如何协作。",
+    "startMs": 104550,
+    "endMs": 108798,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "麦克风收集信号，处理电路识别声音，显示模组和触觉马达传达提醒。",
+    "startMs": 109969,
+    "endMs": 116881,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "部件平稳展开，再沿原位收回。技术的目的，是让重要线索及时被感知。",
+    "startMs": 118052,
+    "endMs": 125420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "另一位骑行者从右后方接近，手表再次识别车铃。",
+    "startMs": 126550,
+    "endMs": 131542,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "短振与右后方提示出现，小林抬腕，转头观察。",
+    "startMs": 131729,
+    "endMs": 136505,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "她让出空间，保持对周围的警觉，等待对方通过。",
+    "startMs": 136692,
+    "endMs": 141420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "安全感，来自及时的线索，也来自自己的判断。",
+    "startMs": 142550,
+    "endMs": 146061,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "SoundBridge，为听障人士设计的环境感知手表。",
+    "startMs": 146143,
+    "endMs": 149420,
+    "timestampMs": null,
+    "confidence": null
+  }
+]

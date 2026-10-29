@@ -3,22 +3,22 @@ import {useThree} from '@react-three/fiber';
 import * as THREE from 'three';
 import {Reflector} from 'three/addons/objects/Reflector.js';
 import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js';
-import {active, events, haptic, phase, ViewState} from './state';
+import {active, bearingLabel, events, formatBearing, haptic, micArrivals, phase, ViewState} from './state';
 
 export const STAGE_W = 1220;
 export const STAGE_H = 650;
-export const cameraPosition = (orbit: number): [number, number, number] => [Math.sin(.36 + orbit) * 7.8, 9, Math.cos(.36 + orbit) * 7.8];
-export const sourcePosition = (bearing: number): [number, number, number] => [Math.sin(bearing * Math.PI / 180) * 3.2, 1.2, Math.cos(bearing * Math.PI / 180) * 3.2];
-export const project = (point: [number, number, number], orbit: number) => {
+export const cameraPosition = (orbit: number, faceView = 0): [number, number, number] => [Math.sin(.36 + orbit) * (7.8 - Math.max(0,faceView) * 2.5), 9 + faceView * 1.8, Math.cos(.36 + orbit) * (7.8 - Math.max(0,faceView) * 2.5)];
+export const sourcePosition = (bearing: number): [number, number, number] => [Math.sin(bearing * Math.PI / 180) * 2.7, 1.2, -Math.cos(bearing * Math.PI / 180) * 2.7];
+export const project = (point: [number, number, number], orbit: number, faceView = 0) => {
   const c = new THREE.PerspectiveCamera(32, STAGE_W / STAGE_H, .1, 100);
-  c.position.set(...cameraPosition(orbit)); c.lookAt(-.35, 1.05, 0); c.updateMatrixWorld();
+  c.position.set(...cameraPosition(orbit, faceView)); c.lookAt(-.35, 1.05, 0); c.updateMatrixWorld();
   const p = new THREE.Vector3(...point).project(c);
   return {left: (p.x + 1) * STAGE_W / 2, top: (1 - p.y) * STAGE_H / 2};
 };
 
-const Environment: React.FC<{orbit: number}> = ({orbit}) => {
+const Environment: React.FC<{orbit: number; faceView: number}> = ({orbit, faceView}) => {
   const {gl, scene, camera} = useThree();
-  useLayoutEffect(() => {camera.position.set(...cameraPosition(orbit)); camera.lookAt(-.35, 1.05, 0); camera.updateMatrixWorld();}, [camera, orbit]);
+  useLayoutEffect(() => {camera.position.set(...cameraPosition(orbit, faceView)); camera.lookAt(-.35, 1.05, 0); camera.updateMatrixWorld();}, [camera, orbit, faceView]);
   useLayoutEffect(() => {
     const room = new THREE.Scene();room.background = new THREE.Color('#08090a');
     const panels: [number[], number[], number[]][] = [
@@ -79,7 +79,7 @@ const RoundedPart: React.FC<{size: [number, number, number]; position: [number, 
 const CoverGlass = () => {
   const geometry = useMemo(() => {const p = new THREE.Path();p.moveTo(0, .052).lineTo(.84, .052).quadraticCurveTo(.955, .052, .96, .005).lineTo(.96, -.02).lineTo(0, -.02);return new THREE.LatheGeometry(p.getPoints(24), 128);}, []);
   useEffect(() => () => geometry.dispose(), [geometry]);
-  return <mesh geometry={geometry}><meshPhysicalMaterial color="#f1f4f6" transparent opacity={.12} roughness={.035} metalness={.1} clearcoat={1} clearcoatRoughness={.03} envMapIntensity={1.4} depthWrite={false}/></mesh>;
+  return <mesh geometry={geometry}><meshPhysicalMaterial color="#f1f4f6" transmission={.92} thickness={.06} ior={1.5} roughness={.035} metalness={0} clearcoat={1} clearcoatRoughness={.03} envMapIntensity={1.4} depthWrite={false}/></mesh>;
 };
 
 const strapGeometry = (sign: number) => {
@@ -117,6 +117,32 @@ const Face: React.FC<{s: ViewState}> = ({s}) => {
     const ctx = canvas.getContext('2d')!;
     const grad = ctx.createRadialGradient(384, 220, 0, 384, 384, 500); grad.addColorStop(0, '#202828'); grad.addColorStop(1, '#050808');
     ctx.fillStyle = grad; ctx.fillRect(0, 0, 768, 768);
+    ctx.textAlign = 'center';
+    if ((p === 3) && (mode === 'listening' || mode === 'low')) {
+      const color = uncertain ? '#9aa6a2' : event.color;
+      ctx.strokeStyle = '#52615c';ctx.lineWidth = 2;
+      for(let i=0;i<36;i++){const a=i*Math.PI/18;const r=i%3===0?297:305;ctx.beginPath();ctx.moveTo(384+Math.sin(a)*r,384-Math.cos(a)*r);ctx.lineTo(384+Math.sin(a)*315,384-Math.cos(a)*315);ctx.stroke();}
+      ctx.fillStyle='#90a099';ctx.font='23px Helvetica';ctx.fillText('0°',384,80);ctx.fillText('180°',384,704);
+      ctx.save();ctx.translate(94,384);ctx.rotate(-Math.PI/2);ctx.fillText('−90°',0,0);ctx.restore();
+      ctx.save();ctx.translate(674,384);ctx.rotate(Math.PI/2);ctx.fillText('+90°',0,0);ctx.restore();
+      ctx.fillStyle='#a9b6b0';ctx.font='22px Helvetica';ctx.fillText('S O U N D B R I D G E',384,153);
+      ctx.fillStyle=color;ctx.font=`500 ${largeText?56:42}px "PingFang SC",sans-serif`;ctx.fillText(event.zh,384,238);
+      ctx.save();ctx.translate(280,220);ctx.scale(.6,.6);ctx.strokeStyle=color;ctx.lineWidth=5;ctx.lineCap='round';
+      if(event===events.bike){
+        for(const x of [-31,31]){ctx.beginPath();ctx.arc(x,14,18,0,Math.PI*2);ctx.stroke();}
+        ctx.beginPath();ctx.moveTo(-31,14);ctx.lineTo(-14,-19);ctx.lineTo(10,14);ctx.lineTo(-31,14);ctx.lineTo(19,-19);ctx.lineTo(31,14);ctx.moveTo(19,-19);ctx.lineTo(16,-31);ctx.lineTo(30,-31);ctx.moveTo(-23,-19);ctx.lineTo(-5,-19);ctx.stroke();
+      }else if(event===events.horn){
+        ctx.beginPath();ctx.moveTo(-35,-12);ctx.lineTo(-17,-12);ctx.lineTo(8,-30);ctx.lineTo(8,29);ctx.lineTo(-17,11);ctx.lineTo(-35,11);ctx.closePath();ctx.stroke();
+        for(const r of [18,31]){ctx.beginPath();ctx.arc(10,0,r,-.7,.7);ctx.stroke();}
+      }
+      ctx.restore();
+      ctx.fillStyle='#f4f7f4';ctx.font=uncertain?'500 49px "PingFang SC",sans-serif':'500 94px Helvetica';ctx.fillText(uncertain?'方向不确定':formatBearing(bearing),384,388);
+      ctx.fillStyle=color;ctx.font=`500 ${largeText?48:39}px "PingFang SC",sans-serif`;ctx.fillText(uncertain?'仅提示声音类别':`约 · ${bearingLabel(bearing)}`,384,456);
+      ctx.fillStyle='#9caea4';ctx.font='24px "PingFang SC",sans-serif';ctx.fillText('相对表盘 12 点方向',384,514);
+      ctx.fillStyle='#e2ebe4';ctx.font='29px "PingFang SC",sans-serif';ctx.fillText('请观察周围',384,583);
+      ctx.fillStyle='#7f9187';ctx.font='21px "PingFang SC",sans-serif';ctx.fillText('来向概念示意',384,631);
+      if(!uncertain){const a=bearing*Math.PI/180-Math.PI/2;ctx.strokeStyle=color;ctx.lineWidth=9;ctx.beginPath();ctx.arc(384,384,332,a-.19,a+.19);ctx.stroke();ctx.save();ctx.translate(384,384);ctx.rotate(a);ctx.fillStyle=color;ctx.beginPath();ctx.moveTo(289,0);ctx.lineTo(264,-12);ctx.lineTo(264,12);ctx.closePath();ctx.fill();ctx.restore();}
+    } else {
     ctx.textAlign = 'center'; ctx.fillStyle = '#9bb4b7'; ctx.font = '26px Helvetica';ctx.fillText('S O U N D B R I D G E', 384, 136);
     ctx.fillStyle = '#f4faf8'; ctx.font = '500 76px Helvetica';ctx.fillText('10:24', 384, 238);
     const label = mode === 'paused' ? '监听已暂停' : mode === 'charging' ? '充电中 · 82%' : mode === 'fault' ? '请检查设备' : p === 3 ? event.zh : p === 2 ? '正在识别' : p === 1 ? '声音已接收' : mode === 'low' ? '低电量 · 12%' : '环境感知中';
@@ -136,6 +162,7 @@ const Face: React.FC<{s: ViewState}> = ({s}) => {
     ctx.fillStyle = '#f5faf9';ctx.font = `500 ${largeText ? 57 : 46}px "PingFang SC", sans-serif`;ctx.fillText(label, 384, 532);
     ctx.fillStyle = '#9bb4b7';ctx.font = '28px "PingFang SC", sans-serif';ctx.fillText(p === 3 ? '请观察周围' : mode === 'paused' ? '由你决定何时开启' : mode === 'fault' ? '感知不可用' : '本地处理 · 自主掌控', 384, 593);
     if(p === 3 && !uncertain) {ctx.strokeStyle = color;ctx.lineWidth = 10;ctx.beginPath();const a = bearing * Math.PI / 180 - Math.PI / 2;ctx.arc(384, 384, 343, a - .42, a + .42);ctx.stroke();}
+    }
     const map = new THREE.CanvasTexture(canvas);map.colorSpace = THREE.SRGBColorSpace;map.anisotropy = 8;return map;
   }, [p, mode, largeText, uncertain, bearing, event]);
   useEffect(() => () => texture.dispose(), [texture]);
@@ -155,44 +182,56 @@ const Watch: React.FC<{s: ViewState}> = ({s}) => {
     <Strap sign={1}/><Strap sign={-1}/>
     {[-1, 1].flatMap(x => [-1, 1].map(z => <RoundedPart key={`${x}${z}`} position={[x * .56, -.05, z * .9]} size={[.15, .27, .45]} color="#87051b"/>))}
     <Case/>
+    <mesh position={[0,-.17,0]} castShadow><boxGeometry args={[1.03,.06,.68]}/><meshStandardMaterial color="#767a7b" metalness={.8} roughness={.45}/></mesh>
+    {[-1,1].flatMap(x=>[-1,1].map(z=><group key={`screw${x}${z}`} position={[x*.59,-.12,z*.55]}><mesh><cylinderGeometry args={[.038,.038,.025,16]}/><meshStandardMaterial color="#b2b6b7" metalness={1} roughness={.3}/></mesh><mesh position={[0,.014,0]}><boxGeometry args={[.04,.002,.009]}/><meshBasicMaterial color="#2d3333"/></mesh></group>))}
+
     <mesh position={[0, .025, 0]} rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[.99, .047, 12, 96]}/><meshStandardMaterial color="#cf2c44" metalness={.85} roughness={.18}/></mesh>
     <mesh position={[1.065, -.065, .12]} rotation={[0, 0, Math.PI / 2]} castShadow><cylinderGeometry args={[.145, .145, .17, 48]}/><meshStandardMaterial color="#38282d" metalness={1} roughness={.25}/></mesh>
     {Array.from({length: 24}, (_, i) => <mesh key={i} position={[1.16, -.065 + Math.cos(i / 24 * Math.PI * 2) * .13, .12 + Math.sin(i / 24 * Math.PI * 2) * .13]}><boxGeometry args={[.045, .021, .021]}/><meshStandardMaterial color="#9b5664" metalness={1} roughness={.3}/></mesh>)}
     <RoundedPart position={[1.025, -.08, -.4]} size={[.12, .12, .25]} color="#33272b"/>
-    <group position={[0, -.2 + e * .74, 0]}>
-      <mesh><cylinderGeometry args={[.87, .87, .045, 64]}/><meshStandardMaterial color="#173e39" metalness={.45} roughness={.4}/></mesh>
-      <mesh position={[0, .075, 0]}><boxGeometry args={[.43, .1, .43]}/><meshStandardMaterial color="#29363b" metalness={.8} roughness={.28} emissive="#42e6d0" emissiveIntensity={p === 2 ? .8 : 0}/></mesh>
-      <mesh position={[0, .13, 0]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[.27, .27]}/><meshStandardMaterial color="#b4c4c8" metalness={.95} roughness={.2}/></mesh>
-      {p === 2 && Array.from({length: 12}, (_, i) => {const height = .035 + .12 * Math.abs(Math.sin(i * .7 + s.time * 3));return <mesh key={`feature${i}`} position={[(i % 4 - 1.5) * .057, .14 + height / 2, (Math.floor(i / 4) - 1) * .067]}><boxGeometry args={[.025, height, .025]}/><meshStandardMaterial color="#8bdccc" emissive="#5adac1" emissiveIntensity={1.3}/></mesh>;})}
+    <group position={[0, -.12 + e * .38, 0]}>
+      <mesh><cylinderGeometry args={[.87, .87, .045, 64]}/><meshStandardMaterial color="#122a25" metalness={.25} roughness={.4}/></mesh>
+      <mesh position={[0, .075, 0]}><boxGeometry args={[.43, .1, .43]}/><meshStandardMaterial color="#29363b" metalness={.8} roughness={.28} emissive="#42e6d0" emissiveIntensity={p === 2 ? .12 : 0}/></mesh>
+      <mesh position={[0, .13, 0]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[.27, .27]}/><meshStandardMaterial color="#35413e" metalness={.6} roughness={.35}/></mesh>
       {[-1, 1].flatMap(sign => Array.from({length: 7}, (_, i) => <group key={`${sign}${i}`}>
         <mesh position={[sign * .26, .07, (i - 3) * .052]}><boxGeometry args={[.09, .02, .018]}/><meshStandardMaterial color="#cfb88c" metalness={.9} roughness={.3}/></mesh>
-        <Trace points={[[sign * .3, .03, (i - 3) * .052], [sign * (.42 + i * .025), .03, (i - 3) * .052], [sign * (.42 + i * .025), .03, sign * (.32 + i * .05)]]} glow={p === 2} color={p === 2 ? '#65d7c7' : '#629a8a'}/>
+        <Trace points={[[sign * .3, .03, (i - 3) * .052], [sign * (.42 + i * .025), .03, (i - 3) * .052], [sign * (.42 + i * .025), .03, sign * (.32 + i * .05)]]} color={p === 2 ? '#aeb797' : '#627a68'}/>
       </group>))}
       {[[-.46, -.3], [.42, -.34], [-.36, .4]].map(([x, z], i) => <mesh key={i} position={[x, .055, z]}><boxGeometry args={[.18, .08, .13]}/><meshStandardMaterial color="#152125" metalness={.6} roughness={.4}/></mesh>)}
-      <group position={[.42 + shake * 2, .07, .4]}>
-        <mesh rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[.18, .18, .31, 32]}/><meshStandardMaterial color="#adb9bf" metalness={1} roughness={.22}/></mesh>
-        {Array.from({length: 8}, (_, i) => <mesh key={i} rotation={[0, 0, 0]} position={[0, 0, -.12 + i * .035]}><torusGeometry args={[.18, .014, 6, 28]}/><meshStandardMaterial color="#b27f4d" metalness={.9} roughness={.3}/></mesh>)}
+      <group position={[.42 + shake * 1.2, .075, .4]}>
+        <mesh><cylinderGeometry args={[.175, .175, .085, 48]}/><meshStandardMaterial color="#9aa5a8" metalness={.95} roughness={.3}/></mesh>
+        <mesh position={[0,.045,0]} rotation={[-Math.PI/2,0,0]}><ringGeometry args={[.12,.145,48]}/><meshStandardMaterial color="#4b5456" metalness={.8} roughness={.35}/></mesh>
+        <mesh position={[0,.048,0]}><boxGeometry args={[.09,.006,.025]}/><meshStandardMaterial color="#263333"/></mesh>
       </group>
+      {Array.from({length:20},(_,i)=>{const a=i/20*Math.PI*2;return <group key={`via${i}`} position={[Math.cos(a)*.75,.028,Math.sin(a)*.75]}><mesh rotation={[-Math.PI/2,0,0]}><ringGeometry args={[.012,.022,10]}/><meshStandardMaterial color="#b7a16c" metalness={.8} roughness={.4}/></mesh></group>;})}
+      {Array.from({length:12},(_,i)=><mesh key={`smt${i}`} position={[-.49+(i%3)*.075,.045,-.21+Math.floor(i/3)*.1]}><boxGeometry args={[.047,.032,.024]}/><meshStandardMaterial color={i%3===0?'#9b855e':'#17201e'} roughness={.5} metalness={.3}/></mesh>)}
+      <mesh position={[.4,.065,-.36]}><boxGeometry args={[.25,.08,.21]}/><meshStandardMaterial color="#8b9596" roughness={.43} metalness={.9}/></mesh>
+
     </group>
-    <group position={[0, .12 + e * 1.9, 0]}>
+    {e > .01 && <>
+      <Trace points={[[-.64,-.08+e*.38,.25],[-.76,.02+e*.6,.25],[-.72,.1+e*1.45,.25]]} color="#a67a38"/>
+      {[-.74,.74].map(x=><mesh key={x} position={[x,.12+e*.72,-.35]}><cylinderGeometry args={[.003,.003,e*1.35,8]}/><meshBasicMaterial color="#81908a" transparent opacity={e*.3}/></mesh>)}
+    </>}
+    <group position={[0, .12 + e * 1.45, 0]}>
       <mesh><cylinderGeometry args={[.96, .96, .055, 96]}/><meshStandardMaterial color="#141e22" metalness={.8} roughness={.2}/></mesh>
       <group position={[0, .032, 0]}><Face s={s}/></group>
       <mesh rotation={[Math.PI / 2, 0, 0]} position={[0, .018, 0]}><torusGeometry args={[.95, .025, 12, 96]}/><meshStandardMaterial color="#ba233b" metalness={1} roughness={.15}/></mesh>
-      <CoverGlass/>
+
     </group>
-    {[-1, 1].flatMap(x => [-1, 1].map(z => <group key={`${x}${z}`} position={[x * .7, -.015, z * .7]}>
-      <mesh rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[.045, .016, 8, 20]}/><meshStandardMaterial color={p === 1 ? '#8bf9e2' : '#172528'} emissive="#50f5d5" emissiveIntensity={p === 1 ? 3 : 0}/></mesh>
-      {p === 1 && <mesh rotation={[-Math.PI / 2, 0, 0]}><ringGeometry args={[.07, .12 + Math.sin((s.time - 3.2) * 5) * .02, 32]}/><meshBasicMaterial color="#83eed7" transparent opacity={.6} side={THREE.DoubleSide}/></mesh>}
-    </group>))}
+    <group position={[0, .12 + e * 1.95, 0]}><CoverGlass/></group>
+    {micArrivals(s.bearing).map(m => <group key={m.id} position={[m.x, -.015, m.z]}>
+      <mesh rotation={[Math.PI / 2, 0, 0]}><torusGeometry args={[.045, .016, 8, 20]}/><meshStandardMaterial color={p === 1 && s.time >= 3.2 + m.fraction * .85 ? '#e8f4ed' : '#172528'} emissive="#50f5d5" emissiveIntensity={p === 1 && s.time >= 3.2 + m.fraction * .85 ? 2 : 0}/></mesh>
+      {p === 1 && s.time >= 3.2 + m.fraction * .85 && <mesh rotation={[-Math.PI / 2, 0, 0]}><ringGeometry args={[.07, .12 + Math.sin((s.time - 3.2) * 5) * .02, 32]}/><meshBasicMaterial color="#83eed7" transparent opacity={.6} side={THREE.DoubleSide}/></mesh>}
+    </group>)}
     {pulse > 0 && [0, 1, 2].map(i => <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[0, -.22, 0]}><ringGeometry args={[1.12 + i * .15 + pulse * .06, 1.14 + i * .15 + pulse * .06, 80]}/><meshBasicMaterial color={events[s.event].color} transparent opacity={pulse * (1 - i * .25)} side={THREE.DoubleSide}/></mesh>)}
   </group>;
 };
 
-export const WatchWorld: React.FC<{s: ViewState}> = ({s}) => {
+export const WatchWorld: React.FC<{s: ViewState;showSource?:boolean}> = ({s,showSource=true}) => {
   const pos = sourcePosition(s.bearing); const p = phase(s);
   return <>
     <color attach="background" args={['#141716']}/><fog attach="fog" args={['#141716', 13, 26]}/>
-    <Environment orbit={s.orbit}/><ambientLight intensity={.14}/>
+    <Environment orbit={s.orbit} faceView={s.faceView}/><ambientLight intensity={.14}/>
     <directionalLight position={[-3, 7, 5]} intensity={2.2} castShadow shadow-mapSize={[2048, 2048]} shadow-bias={-.001} shadow-radius={5} shadow-blurSamples={8} shadow-camera-far={25}/>
     <directionalLight position={[3, 4, -4]} intensity={.6} color="#f5e9e4"/>
     <pointLight position={[-3, 2, 1]} intensity={8} color="#e51b39"/>
@@ -207,7 +246,7 @@ export const WatchWorld: React.FC<{s: ViewState}> = ({s}) => {
     </mesh>
     <gridHelper material-transparent material-opacity={.16} args={[20, 40, '#1a3035', '#142328']} position={[0, -.245, 0]}/>
     <Watch s={s}/>
-    {active(s) && <>
+    {active(s) && showSource && <>
       <group position={pos}>
         <mesh><cylinderGeometry args={[.17, .23, .2, 32]}/><meshStandardMaterial color="#8da4ac" roughness={.3} metalness={.9}/></mesh>
         <mesh position={[0, .13, 0]}><sphereGeometry args={[.095, 24, 16]}/><meshStandardMaterial color={events[s.event].color} emissive={events[s.event].color} emissiveIntensity={p === 0 ? 2 : .3}/></mesh>
@@ -220,8 +259,14 @@ export const WatchWorld: React.FC<{s: ViewState}> = ({s}) => {
           <mesh><sphereGeometry args={[radius, 48, 24, 0, Math.PI * 2, .35, 1.2]}/><meshBasicMaterial color={events[s.event].color} wireframe transparent opacity={(1 - progress) * .065} depthWrite={false}/></mesh>
         </group>;
       })}
-      {p === 1 && [-1, 1].flatMap(x => [-1, 1].map(z => <Trace key={`${x}${z}`} points={[[x * .7, 1.4, z * .7], [x * .35, 1.3 + s.exploded * .74, z * .35], [0, 1.3 + s.exploded * .74, 0]]} color="#79efd6" glow/>))}
-      {p === 1 && [-1, 1].flatMap(x => [-1, 1].map(z => {const u = Math.min(1, (s.time - 3.2) / 1.35);return <mesh key={`packet${x}${z}`} position={[x * .7 * (1 - u), 1.4 + (s.exploded * .74 - .1) * u, z * .7 * (1 - u)]}><sphereGeometry args={[.043, 16, 12]}/><meshBasicMaterial color="#b4ffe8"/></mesh>;}))}
+      {p === 1 && micArrivals(s.bearing).map(m => {
+        const u = Math.max(0,Math.min(1,(s.time-3.2-m.fraction*.85)/.45));
+        return <group key={m.id}>
+          <Trace points={[pos,[m.x,1.4,m.z]]} color="#9b805e"/>
+          {u>0 && <><Trace points={[[m.x,1.4,m.z],[m.x*.35,1.32+s.exploded*.38,m.z*.35],[0,1.32+s.exploded*.38,0]]} color="#c4b99b"/>
+          <mesh position={[m.x*(1-u),1.4+(s.exploded*.38-.08)*u,m.z*(1-u)]}><sphereGeometry args={[.035,12,10]}/><meshBasicMaterial color="#fff1d5"/></mesh></>}
+        </group>;
+      })}
     </>}
   </>;
 };

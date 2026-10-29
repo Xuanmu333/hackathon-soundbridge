@@ -1,0 +1,34 @@
+{
+  "status": "Prepared locally; generation not submitted. Runway currently displays 0 credits.",
+  "duration_seconds": 8,
+  "aspect_ratio": "16:9",
+  "subject": "Same fictional photorealistic woman as the supplied references. No stylized 3D character.",
+  "prompt": "One continuous eight-second live-action-style cinematic shot, preserving the exact woman, short dark bob haircut, muted teal overshirt, ivory shirt, charcoal trousers and beige crossbody bag from the reference images. She wears a premium burgundy-red metal round smartwatch on her left wrist throughout. On the same sunlit riverside shared path, she takes two natural steps. She notices a subtle tactile cue at her wrist, slows to a steady stop, raises her left wrist to chest height and looks directly at the watch face. She then looks over her left shoulder toward the approaching cyclist while remaining safely at the side of the path. The cyclist stays several meters away throughout this shot. Calm, attentive, independent expression. Natural weight shifts, plausible fingers, coherent wrist and elbow motion, stable identity, continuous clothing and lighting. Gentle stabilized medium three-quarter camera tracking, realistic skin and fabric, premium warm cinematic photography. No dialogue, no friends, no floating UI, no text, no exaggerated vibration, no panic, no contact or collision.",
+  "timing": [
+    {
+      "seconds": "0-2",
+      "action": "Walk naturally; cyclist remains at a distance."
+    },
+    {
+      "seconds": "2-3",
+      "action": "Notice wrist cue; slow and stop."
+    },
+    {
+      "seconds": "3-5.5",
+      "action": "Raise left wrist and inspect watch."
+    },
+    {
+      "seconds": "5.5-8",
+      "action": "Look toward rear-left and assess the cyclist."
+    }
+  ],
+  "acceptance": [
+    "Same identity as the original images",
+    "Realistic movement rather than image zoom",
+    "Correct left wrist with consistent red watch",
+    "No hand deformation",
+    "A clear wrist check followed by environmental observation",
+    "Safe cyclist spacing"
+  ],
+  "generation_note": "Choose an available image/reference-to-video model and confirm its displayed generation cost before submitting. Do not purchase a plan automatically."
+}

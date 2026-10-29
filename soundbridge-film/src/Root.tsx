@@ -12,6 +12,7 @@ import {Home} from './scenes/Home';
 import {Modes} from './scenes/Modes';
 import {Privacy} from './scenes/Privacy';
 import {Closing} from './scenes/Closing';
+import {RoadFilm} from './studio3d/RoadFilm';
 import {DemoFilm} from './studio3d/DemoFilm';
 const Film=()=>{const {fps}=useVideoConfig();return <><Series>
 <Series.Sequence name="01 Opening" durationInFrames={360} premountFor={fps}><Opening/></Series.Sequence>
@@ -29,6 +30,7 @@ const Film=()=>{const {fps}=useVideoConfig();return <><Series>
 </Series><Audio src={staticFile('score.wav')} premountFor={fps} volume={.5}/></>};
 const MotionStudy=()=> <Series><Series.Sequence durationInFrames={360}><Haptics/></Series.Sequence><Series.Sequence durationInFrames={360}><Modes/></Series.Sequence></Series>;
 export const RemotionRoot=()=> <>
+<Composition id="SoundBridge-Road-Film" component={RoadFilm} durationInFrames={4500} fps={30} width={1920} height={1080}/>
 <Composition id="SoundBridge-3D-Film" component={DemoFilm} durationInFrames={4500} fps={30} width={1920} height={1080}/>
 <Composition id="Motion-Study" component={MotionStudy} durationInFrames={720} fps={30} width={1920} height={1080}/>
 <Composition id="SoundBridge-Film" component={Film} durationInFrames={4500} fps={30} width={1920} height={1080}/><Folder name="Scenes">
