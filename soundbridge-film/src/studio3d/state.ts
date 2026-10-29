@@ -3,7 +3,7 @@ export type Mode = 'listening' | 'paused' | 'charging' | 'low' | 'fault';
 export type ViewState = {
   event: SoundEvent; mode: Mode; bearing: number; strength: number;
   exploded: number; orbit: number; time: number; uncertain: boolean; largeText: boolean;
-  directionPreview: boolean; faceView: number;
+  directionPreview: boolean; faceView: number; bearingHighlight?: number;
 };
 export const initialState: ViewState = {
   event: 'bike', mode: 'listening', bearing: -115, strength: .65,

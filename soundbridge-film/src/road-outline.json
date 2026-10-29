@@ -1,21 +1,57 @@
 [
   {
+    "name": "Structure",
+    "duration": 20,
+    "title": "安全线索，从内部协作开始",
+    "en": "INSIDE THE WATCH. BUILT FOR AWARENESS.",
+    "lines": [
+      {
+        "zh": "SoundBridge，为听障人士设计的环境感知手表。先从它的内部看起。",
+        "en": "SoundBridge is an environmental awareness watch for deaf and hard-of-hearing people. Let's look inside."
+      },
+      {
+        "zh": "四个麦克风接收声音，处理电路分析信号，显示模组和触觉马达传达提醒。",
+        "en": "Four microphones capture sound. The processor analyzes signals. The display and haptic actuator deliver cues."
+      },
+      {
+        "zh": "这些部件如何协作，把声音变成可感知的安全线索？",
+        "en": "How do these components turn sound into perceptible safety cues?"
+      }
+    ]
+  },
+  {
+    "name": "Logic",
+    "duration": 22,
+    "title": "从环境声音，到可感知的线索",
+    "en": "SOUND → ANALYSIS → A CUE SHE CAN FEEL AND SEE",
+    "lines": [
+      {
+        "zh": "四路麦克风同步收音，把声音转成数字信号。",
+        "en": "Four microphones capture sound together and convert it into digital signals."
+      },
+      {
+        "zh": "一条路径提取频谱特征，识别车铃或鸣笛；另一条比较到达时差，估算来向。",
+        "en": "One path extracts spectral features to classify bells or horns. Another compares arrival times to estimate direction."
+      },
+      {
+        "zh": "两路结果汇合：振动引起注意，表盘用图标、文字和角度，提示往哪里看。",
+        "en": "The results combine: vibration gets attention; icons, text and angles show where to look."
+      }
+    ]
+  },
+  {
     "name": "Opening",
-    "duration": 12,
+    "duration": 10,
     "title": "让听障人士，及时感知路上的线索",
     "en": "ENVIRONMENTAL AWARENESS FOR DEAF AND HARD-OF-HEARING PEOPLE",
     "lines": [
       {
-        "zh": "小林是一位听障人士，正在独自出行。",
-        "en": "Xiaolin is deaf or hard of hearing and is travelling independently."
+        "zh": "现在，回到小林的一天。她是一位听障人士，正在独自出行。",
+        "en": "Now, back to Xiaolin's day. She is deaf or hard of hearing and is travelling independently."
       },
       {
-        "zh": "SoundBridge，把重要的环境声音，转化为腕上的提醒。",
-        "en": "SoundBridge turns important environmental sounds into cues on her wrist."
-      },
-      {
-        "zh": "这一次，我们跟随她走过一段日常道路。",
-        "en": "Follow her along an everyday journey."
+        "zh": "让我们看看，腕上的线索如何帮助她留意路况。",
+        "en": "Let's see how cues on her wrist help her stay aware of the road."
       }
     ]
   },
@@ -53,21 +89,17 @@
   },
   {
     "name": "Array",
-    "duration": 18,
+    "duration": 12,
     "title": "四路信号，共同判断来向",
     "en": "FOUR SIGNALS. A DIRECTIONAL CUE.",
     "lines": [
       {
-        "zh": "手表上的四个麦克风，位于不同的位置。",
-        "en": "Four microphones sit at different positions on the watch."
+        "zh": "比较四个麦克风的到达时差，可以估算声音来向。",
+        "en": "Comparing arrival times at four microphones helps estimate direction."
       },
       {
-        "zh": "比较同一次声音到达的微小时差，可以估算声音的来向。",
-        "en": "Tiny differences in arrival time help estimate where the sound came from."
-      },
-      {
-        "zh": "骑行者从左后方经过左前方，空间位置与表盘角度同步变化。",
-        "en": "As the cyclist moves from rear left to front left, the source position and dial angle change together."
+        "zh": "骑行者从左后方经过左前方，表盘角度与方位标记同步变化。",
+        "en": "As the cyclist moves from rear left to front left, the dial angle and pointer move together."
       }
     ]
   },
@@ -109,17 +141,13 @@
   },
   {
     "name": "Bearing",
-    "duration": 18,
+    "duration": 12,
     "title": "类别与方向，让提醒更清楚",
     "en": "KNOW THE SOUND. UNDERSTAND ITS DIRECTION.",
     "lines": [
       {
-        "zh": "声音类别告诉她，发生了什么；来向提示帮助她决定往哪里看。",
-        "en": "The sound class explains what happened. Direction helps her decide where to look."
-      },
-      {
-        "zh": "表盘同时呈现角度、文字和指示标记，减少理解的负担。",
-        "en": "Angles, text and a pointer make the cue easier to understand."
+        "zh": "看这里，表盘高亮角度与方向箭头，说明声音从哪里来。",
+        "en": "Here, the dial highlights the angle and directional arrow to show where the sound comes from."
       },
       {
         "zh": "触觉引起注意，视觉补充信息，最后由她观察和判断。",
@@ -129,41 +157,17 @@
   },
   {
     "name": "Personalize",
-    "duration": 16,
+    "duration": 10,
     "title": "在安全位置，调整适合自己的提醒",
     "en": "PERSONALIZE THE CUE IN A SAFE PLACE.",
     "lines": [
       {
-        "zh": "在步道旁停稳后，小林调整手表的提醒方式。",
-        "en": "Stopped safely beside the path, Xiaolin adjusts her watch."
+        "zh": "在安全位置停稳后，小林调整振动强度和文字大小。",
+        "en": "Stopped in a safe place, Xiaolin adjusts vibration strength and text size."
       },
       {
-        "zh": "振动强度和文字大小，按照她的感受来设置。",
-        "en": "She sets vibration strength and text size to suit her."
-      },
-      {
-        "zh": "让每一次提醒清楚而舒适，帮助她从容关注周围。",
-        "en": "Clear, comfortable cues help her stay aware of her surroundings."
-      }
-    ]
-  },
-  {
-    "name": "Structure",
-    "duration": 22,
-    "title": "一份安全线索，来自内部协作",
-    "en": "INSIDE EVERY CUE, COMPONENTS WORK TOGETHER.",
-    "lines": [
-      {
-        "zh": "她继续行走时，我们看看手表内部如何协作。",
-        "en": "As she continues walking, we look inside the watch."
-      },
-      {
-        "zh": "麦克风收集信号，处理电路识别声音，显示模组和触觉马达传达提醒。",
-        "en": "Microphones capture signals. The board identifies sounds. The display and haptic actuator deliver the cue."
-      },
-      {
-        "zh": "部件平稳展开，再沿原位收回。技术的目的，是让重要线索及时被感知。",
-        "en": "The layers separate smoothly and return to place. Their purpose is to make important cues perceptible."
+        "zh": "让提醒清楚而舒适，后续行程沿用她的设置。",
+        "en": "Clear, comfortable cues continue with her chosen settings."
       }
     ]
   },

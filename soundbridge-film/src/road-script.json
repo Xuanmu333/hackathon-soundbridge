@@ -1,31 +1,84 @@
 [
   {
-    "name": "Opening",
-    "duration": 12,
-    "title": "让听障人士，及时感知路上的线索",
-    "en": "ENVIRONMENTAL AWARENESS FOR DEAF AND HARD-OF-HEARING PEOPLE",
+    "name": "Structure",
+    "duration": 20,
+    "title": "安全线索，从内部协作开始",
+    "en": "INSIDE THE WATCH. BUILT FOR AWARENESS.",
     "start": 0,
     "voice": [
       {
-        "file": "voice-road/00-00-dbd82084.mp3",
+        "file": "voice-road/00-00-bdaba196.mp3",
         "start": 0.55,
-        "duration": 3.090167,
-        "zh": "小林是一位听障人士，正在独自出行。",
-        "en": "Xiaolin is deaf or hard of hearing and is travelling independently."
+        "duration": 6.264,
+        "zh": "SoundBridge，为听障人士设计的环境感知手表。先从它的内部看起。",
+        "en": "SoundBridge is an environmental awareness watch for deaf and hard-of-hearing people. Let's look inside."
       },
       {
-        "file": "voice-road/00-01-e285e6a3.mp3",
-        "start": 3.847,
-        "duration": 3.990792,
-        "zh": "SoundBridge，把重要的环境声音，转化为腕上的提醒。",
-        "en": "SoundBridge turns important environmental sounds into cues on her wrist."
+        "file": "voice-road/00-01-6a9ff624.mp3",
+        "start": 7.105,
+        "duration": 7.104,
+        "zh": "四个麦克风接收声音，处理电路分析信号，显示模组和触觉马达传达提醒。",
+        "en": "Four microphones capture sound. The processor analyzes signals. The display and haptic actuator deliver cues."
       },
       {
-        "file": "voice-road/00-02-1845b95d.mp3",
-        "start": 8.044,
-        "duration": 3.256292,
-        "zh": "这一次，我们跟随她走过一段日常道路。",
-        "en": "Follow her along an everyday journey."
+        "file": "voice-road/00-02-33df451b.mp3",
+        "start": 14.5,
+        "duration": 4.8,
+        "zh": "这些部件如何协作，把声音变成可感知的安全线索？",
+        "en": "How do these components turn sound into perceptible safety cues?"
+      }
+    ]
+  },
+  {
+    "name": "Logic",
+    "duration": 22,
+    "title": "从环境声音，到可感知的线索",
+    "en": "SOUND → ANALYSIS → A CUE SHE CAN FEEL AND SEE",
+    "start": 20,
+    "voice": [
+      {
+        "file": "voice-road/01-00-92c6c9f9.mp3",
+        "start": 0.55,
+        "duration": 4.392,
+        "zh": "四路麦克风同步收音，把声音转成数字信号。",
+        "en": "Four microphones capture sound together and convert it into digital signals."
+      },
+      {
+        "file": "voice-road/01-01-c9d8304f.mp3",
+        "start": 5.945,
+        "duration": 7.296,
+        "zh": "一条路径提取频谱特征，识别车铃或鸣笛；另一条比较到达时差，估算来向。",
+        "en": "One path extracts spectral features to classify bells or horns. Another compares arrival times to estimate direction."
+      },
+      {
+        "file": "voice-road/01-02-e3077c4d.mp3",
+        "start": 14.244,
+        "duration": 7.056,
+        "zh": "两路结果汇合：振动引起注意，表盘用图标、文字和角度，提示往哪里看。",
+        "en": "The results combine: vibration gets attention; icons, text and angles show where to look."
+      }
+    ]
+  },
+  {
+    "name": "Opening",
+    "duration": 10,
+    "title": "让听障人士，及时感知路上的线索",
+    "en": "ENVIRONMENTAL AWARENESS FOR DEAF AND HARD-OF-HEARING PEOPLE",
+    "start": 42,
+    "voice": [
+      {
+        "file": "voice-road/02-00-d571096f.mp3",
+        "start": 0.55,
+        "duration": 4.850667,
+        "zh": "现在，回到小林的一天。她是一位听障人士，正在独自出行。",
+        "en": "Now, back to Xiaolin's day. She is deaf or hard of hearing and is travelling independently."
+      },
+      {
+        "file": "voice-road/02-01-66b4b123.mp3",
+        "start": 5.61,
+        "duration": 3.69,
+        "zh": "让我们看看，腕上的线索如何帮助她留意路况。",
+        "en": "Let's see how cues on her wrist help her stay aware of the road."
       }
     ]
   },
@@ -34,19 +87,19 @@
     "duration": 9,
     "title": "身后的车铃，抵达手腕",
     "en": "A BELL BEHIND HER. A CUE ON HER WRIST.",
-    "start": 12,
+    "start": 52,
     "voice": [
       {
-        "file": "voice-road/01-00-5120d493.mp3",
+        "file": "voice-road/03-00-5120d493.mp3",
         "start": 0.55,
-        "duration": 2.863125,
+        "duration": 3.129917,
         "zh": "骑行者从左后方接近，车铃响起。",
         "en": "A cyclist approaches from behind on the left and rings a bell."
       },
       {
-        "file": "voice-road/01-01-5d3b5cc6.mp3",
-        "start": 3.632,
-        "duration": 4.668125,
+        "file": "voice-road/03-01-5d3b5cc6.mp3",
+        "start": 3.895,
+        "duration": 4.40525,
         "zh": "四个麦克风接收声音，识别车铃后，发出三次短振。",
         "en": "Four microphones capture the sound. Recognizing the bicycle bell triggers three short pulses."
       }
@@ -57,19 +110,19 @@
     "duration": 9,
     "title": "抬腕查看，转头确认",
     "en": "FEEL. CHECK. LOOK AROUND.",
-    "start": 21,
+    "start": 61,
     "voice": [
       {
-        "file": "voice-road/02-00-c2395379.mp3",
+        "file": "voice-road/04-00-c2395379.mp3",
         "start": 0.55,
-        "duration": 4.25875,
+        "duration": 4.045708,
         "zh": "三次短振引起注意，小林抬腕查看类别和来向。",
         "en": "Three short pulses get her attention. Xiaolin checks the sound class and direction on her wrist."
       },
       {
-        "file": "voice-road/02-01-4ba0d4a3.mp3",
-        "start": 5.025,
-        "duration": 3.275375,
+        "file": "voice-road/04-01-4ba0d4a3.mp3",
+        "start": 4.808,
+        "duration": 3.491958,
         "zh": "她转头确认，靠边让行，等骑行者通过。",
         "en": "She looks around, moves aside and lets the cyclist pass."
       }
@@ -77,31 +130,24 @@
   },
   {
     "name": "Array",
-    "duration": 18,
+    "duration": 12,
     "title": "四路信号，共同判断来向",
     "en": "FOUR SIGNALS. A DIRECTIONAL CUE.",
-    "start": 30,
+    "start": 70,
     "voice": [
       {
-        "file": "voice-road/03-00-467fbbb0.mp3",
+        "file": "voice-road/05-00-f1517ae3.mp3",
         "start": 0.55,
-        "duration": 3.648,
-        "zh": "手表上的四个麦克风，位于不同的位置。",
-        "en": "Four microphones sit at different positions on the watch."
+        "duration": 4.392,
+        "zh": "比较四个麦克风的到达时差，可以估算声音来向。",
+        "en": "Comparing arrival times at four microphones helps estimate direction."
       },
       {
-        "file": "voice-road/03-01-5e6a2ad5.mp3",
-        "start": 5.373,
-        "duration": 4.872,
-        "zh": "比较同一次声音到达的微小时差，可以估算声音的来向。",
-        "en": "Tiny differences in arrival time help estimate where the sound came from."
-      },
-      {
-        "file": "voice-road/03-02-8ea5a7cd.mp3",
-        "start": 11.42,
-        "duration": 5.88,
-        "zh": "骑行者从左后方经过左前方，空间位置与表盘角度同步变化。",
-        "en": "As the cyclist moves from rear left to front left, the source position and dial angle change together."
+        "file": "voice-road/05-01-3ddf3973.mp3",
+        "start": 5.396,
+        "duration": 5.904,
+        "zh": "骑行者从左后方经过左前方，表盘角度与方位标记同步变化。",
+        "en": "As the cyclist moves from rear left to front left, the dial angle and pointer move together."
       }
     ]
   },
@@ -110,26 +156,26 @@
     "duration": 12,
     "title": "路口的鸣笛，提醒她留意车辆",
     "en": "NOTICE THE VEHICLE AT THE CROSSING.",
-    "start": 48,
+    "start": 82,
     "voice": [
       {
-        "file": "voice-road/04-00-35631857.mp3",
+        "file": "voice-road/06-00-35631857.mp3",
         "start": 0.55,
-        "duration": 2.398958,
+        "duration": 2.622708,
         "zh": "来到路口，一辆车从右前方驶来。",
         "en": "At a crossing, a vehicle approaches from the front right."
       },
       {
-        "file": "voice-road/04-01-79fac60b.mp3",
-        "start": 3.155,
-        "duration": 4.6605,
+        "file": "voice-road/06-01-79fac60b.mp3",
+        "start": 3.372,
+        "duration": 4.154,
         "zh": "识别鸣笛后，两次长振提醒她，表盘显示类别和来向。",
         "en": "Recognizing the horn triggers two long pulses. The dial shows the sound class and direction."
       },
       {
-        "file": "voice-road/04-02-93ea99bf.mp3",
-        "start": 8.021,
-        "duration": 3.279,
+        "file": "voice-road/06-02-93ea99bf.mp3",
+        "start": 7.726,
+        "duration": 3.57375,
         "zh": "收到振动后，她抬腕查看，在路缘内停步观察。",
         "en": "Feeling the vibration, she checks her watch and stops before the curb."
       }
@@ -140,17 +186,17 @@
     "duration": 10,
     "title": "先观察，等车辆通过",
     "en": "LOOK FIRST. LET THE VEHICLE PASS.",
-    "start": 60,
+    "start": 94,
     "voice": [
       {
-        "file": "voice-road/05-00-493a78e3.mp3",
+        "file": "voice-road/07-00-493a78e3.mp3",
         "start": 0.55,
         "duration": 4.32,
         "zh": "看清车辆的行进方向，她留在安全的位置等待。",
         "en": "She checks the vehicle direction and waits in a safe position."
       },
       {
-        "file": "voice-road/05-01-c7ef575b.mp3",
+        "file": "voice-road/07-01-c7ef575b.mp3",
         "start": 5.148,
         "duration": 4.152,
         "zh": "等车辆通过，确认道路情况，再继续前行。",
@@ -160,29 +206,22 @@
   },
   {
     "name": "Bearing",
-    "duration": 18,
+    "duration": 12,
     "title": "类别与方向，让提醒更清楚",
     "en": "KNOW THE SOUND. UNDERSTAND ITS DIRECTION.",
-    "start": 70,
+    "start": 104,
     "voice": [
       {
-        "file": "voice-road/06-00-d81ea17b.mp3",
+        "file": "voice-road/08-00-fe5e659f.mp3",
         "start": 0.55,
-        "duration": 5.796583,
-        "zh": "声音类别告诉她，发生了什么；来向提示帮助她决定往哪里看。",
-        "en": "The sound class explains what happened. Direction helps her decide where to look."
+        "duration": 5.416458,
+        "zh": "看这里，表盘高亮角度与方向箭头，说明声音从哪里来。",
+        "en": "Here, the dial highlights the angle and directional arrow to show where the sound comes from."
       },
       {
-        "file": "voice-road/06-01-5337516a.mp3",
-        "start": 6.541,
-        "duration": 5.411375,
-        "zh": "表盘同时呈现角度、文字和指示标记，减少理解的负担。",
-        "en": "Angles, text and a pointer make the cue easier to understand."
-      },
-      {
-        "file": "voice-road/06-02-beb4f02f.mp3",
-        "start": 12.147,
-        "duration": 5.152625,
+        "file": "voice-road/08-01-beb4f02f.mp3",
+        "start": 6.186,
+        "duration": 5.113958,
         "zh": "触觉引起注意，视觉补充信息，最后由她观察和判断。",
         "en": "Touch gets her attention. Visual cues add context. She observes and decides."
       }
@@ -190,61 +229,24 @@
   },
   {
     "name": "Personalize",
-    "duration": 16,
+    "duration": 10,
     "title": "在安全位置，调整适合自己的提醒",
     "en": "PERSONALIZE THE CUE IN A SAFE PLACE.",
-    "start": 88,
+    "start": 116,
     "voice": [
       {
-        "file": "voice-road/07-00-64418d90.mp3",
+        "file": "voice-road/09-00-db61c5f0.mp3",
         "start": 0.55,
-        "duration": 4.272,
-        "zh": "在步道旁停稳后，小林调整手表的提醒方式。",
-        "en": "Stopped safely beside the path, Xiaolin adjusts her watch."
+        "duration": 4.587417,
+        "zh": "在安全位置停稳后，小林调整振动强度和文字大小。",
+        "en": "Stopped in a safe place, Xiaolin adjusts vibration strength and text size."
       },
       {
-        "file": "voice-road/07-01-f332989d.mp3",
-        "start": 5.549,
-        "duration": 4.296,
-        "zh": "振动强度和文字大小，按照她的感受来设置。",
-        "en": "She sets vibration strength and text size to suit her."
-      },
-      {
-        "file": "voice-road/07-02-96140206.mp3",
-        "start": 10.572,
-        "duration": 4.728,
-        "zh": "让每一次提醒清楚而舒适，帮助她从容关注周围。",
-        "en": "Clear, comfortable cues help her stay aware of her surroundings."
-      }
-    ]
-  },
-  {
-    "name": "Structure",
-    "duration": 22,
-    "title": "一份安全线索，来自内部协作",
-    "en": "INSIDE EVERY CUE, COMPONENTS WORK TOGETHER.",
-    "start": 104,
-    "voice": [
-      {
-        "file": "voice-road/08-00-1c1d43ac.mp3",
-        "start": 0.55,
-        "duration": 4.128,
-        "zh": "她继续行走时，我们看看手表内部如何协作。",
-        "en": "As she continues walking, we look inside the watch."
-      },
-      {
-        "file": "voice-road/08-01-dbf581cd.mp3",
-        "start": 5.969,
-        "duration": 6.792,
-        "zh": "麦克风收集信号，处理电路识别声音，显示模组和触觉马达传达提醒。",
-        "en": "Microphones capture signals. The board identifies sounds. The display and haptic actuator deliver the cue."
-      },
-      {
-        "file": "voice-road/08-02-10be6547.mp3",
-        "start": 14.052,
-        "duration": 7.248,
-        "zh": "部件平稳展开，再沿原位收回。技术的目的，是让重要线索及时被感知。",
-        "en": "The layers separate smoothly and return to place. Their purpose is to make important cues perceptible."
+        "file": "voice-road/09-01-26ca911b.mp3",
+        "start": 5.356,
+        "duration": 3.944333,
+        "zh": "让提醒清楚而舒适，后续行程沿用她的设置。",
+        "en": "Clear, comfortable cues continue with her chosen settings."
       }
     ]
   },
@@ -256,21 +258,21 @@
     "start": 126,
     "voice": [
       {
-        "file": "voice-road/09-00-6ea13c53.mp3",
+        "file": "voice-road/10-00-6ea13c53.mp3",
         "start": 0.55,
         "duration": 4.872,
         "zh": "另一位骑行者从右后方接近，手表再次识别车铃。",
         "en": "Another cyclist approaches from behind on the right. The watch identifies the bell."
       },
       {
-        "file": "voice-road/09-01-2cb8d8c9.mp3",
+        "file": "voice-road/10-01-2cb8d8c9.mp3",
         "start": 5.729,
         "duration": 4.656,
         "zh": "短振与右后方提示出现，小林抬腕，转头观察。",
         "en": "Short pulses and a rear-right cue appear. Xiaolin checks her wrist and looks around."
       },
       {
-        "file": "voice-road/09-02-e11ae071.mp3",
+        "file": "voice-road/10-02-e11ae071.mp3",
         "start": 10.692,
         "duration": 4.608,
         "zh": "她让出空间，保持对周围的警觉，等待对方通过。",
@@ -286,14 +288,14 @@
     "start": 142,
     "voice": [
       {
-        "file": "voice-road/10-00-045b7260.mp3",
+        "file": "voice-road/11-00-045b7260.mp3",
         "start": 0.55,
         "duration": 3.391125,
         "zh": "安全感，来自及时的线索，也来自自己的判断。",
         "en": "Confidence comes from timely cues and her own judgment."
       },
       {
-        "file": "voice-road/10-01-550470ff.mp3",
+        "file": "voice-road/11-01-550470ff.mp3",
         "start": 4.143,
         "duration": 3.157333,
         "zh": "SoundBridge，为听障人士设计的环境感知手表。",

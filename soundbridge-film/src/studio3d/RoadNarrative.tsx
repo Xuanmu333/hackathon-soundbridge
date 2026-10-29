@@ -2,6 +2,7 @@ import React from 'react';
 import {bearingLabel,events,formatBearing,haptic,hapticPattern,micArrivals,phase,ViewState} from './state';
 
 export const roadNarrative:Record<string,{tag:string;title:string;text:string}>= {
+ Logic:{tag:'技术实现',title:'两路解析，\n形成一份提醒',text:'收音之后，一路识别声音类别，一路估算来向。结果汇合，转成触觉与视觉线索，帮助听障使用者及时察觉。'},
  Opening:{tag:'独立出行',title:'把安全线索\n带到她的手腕',text:'小林是一位听障人士。SoundBridge 将重要的环境声音转为可感知的提醒，支持她观察与判断。'},
  Approach:{tag:'身后来车',title:'车铃响起，\n提醒即将抵达',text:'四个麦克风接收声音，识别车铃与来向。三次短振，让她注意到视线之外的骑行者。'},
  Respond:{tag:'感知与回应',title:'感到短振，\n抬腕确认',text:'三次短振引起注意；图标和文字说明声音类别，方位标记提示往哪里看。她观察后，再让出空间。'},
@@ -16,15 +17,16 @@ export const roadNarrative:Record<string,{tag:string;title:string;text:string}>=
 };
 
 export const RoadNarrative:React.FC<{s:ViewState;chapter:string;index:number;reveal?:number}>=({s,chapter,index,reveal=1})=>{
- const copy=roadNarrative[chapter],p=phase(s),idle=p<0,pulse=haptic(s),pattern=hapticPattern(s.event),personalize=chapter==='Personalize';
+ const copy=roadNarrative[chapter],p=phase(s),idle=p<0,pulse=haptic(s),pattern=hapticPattern(s.event),personalize=chapter==='Personalize',technical=chapter==='Structure'||chapter==='Logic';
  const end=pattern[pattern.length-1].start+pattern[pattern.length-1].duration;
  const sensation=personalize?`体验反馈 · 振动强度 ${Math.round(s.strength*100)}%`:idle?'等待新的声音线索':s.time<pattern[0].start?'识别后触发腕上提醒':s.time<end?'图形与手表同步振动':'提醒已送达 · 观察周围';
- const tactile=chapter!=='Array'&&chapter!=='Structure';
+ const tactile=chapter!=='Array'&&!technical;
  return <aside className="road-narrative" style={{opacity:reveal,transform:`translateY(${(1-reveal)*10}px)`}}>
   <div className="narrative-kicker"><b>{String(index).padStart(2,'0')}</b><span>{copy.tag}</span><i/></div>
   <h2>{copy.title}</h2><p className="narrative-copy">{copy.text}</p>
-  <div className="narrative-signal"><span>{personalize?'个人设置':idle?'环境感知':p<3?'声音解析':'识别结果'}</span><strong>{personalize?'提醒体验':idle?'感知中':p<3?'接收 → 分析':events[s.event].zh}</strong><small>{personalize?`振动 ${Math.round(s.strength*100)}% · ${s.largeText?'大字显示已开启':'标准字号'}`:idle?'留意周围的下一条线索':p<3?'阵列接收 · 类别与来向判断':`${formatBearing(s.bearing)} · ${bearingLabel(s.bearing)}`}</small></div>
+  <div className="narrative-signal"><span>{technical?'实现逻辑':personalize?'个人设置':idle?'环境感知':p<3?'声音解析':'识别结果'}</span><strong>{technical?'信号 → 感知':personalize?'提醒体验':idle?'感知中':p<3?'接收 → 分析':events[s.event].zh}</strong><small>{technical?'麦克风 · 本地处理 · 显示与触觉':personalize?`振动 ${Math.round(s.strength*100)}% · ${s.largeText?'大字显示已开启':'标准字号'}`:idle?'留意周围的下一条线索':p<3?'阵列接收 · 类别与来向判断':`${formatBearing(s.bearing)} · ${bearingLabel(s.bearing)}`}</small></div>
   <div className="narrative-graphic">
+   {chapter==='Logic'&&<div className="logic-left-steps"><div><b>01</b><span>收音<small>同步接收四路信号</small></span></div><div><b>02</b><span>解析<small>类别识别 + 来向估算</small></span></div><div><b>03</b><span>反馈<small>触觉提醒 + 表盘呈现</small></span></div></div>}
    {tactile&&<>
     <svg viewBox="0 0 264 144" aria-label="与腕表同步的振动节奏">
      <path d="M8 69H256" stroke="#5a625c" strokeWidth="1"/>

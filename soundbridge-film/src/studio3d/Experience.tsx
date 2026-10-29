@@ -8,7 +8,7 @@ import {cameraPosition, project, sourcePosition, STAGE_H, STAGE_W, WatchWorld} f
 import './studio.css';
 import {RoadNarrative} from './RoadNarrative';
 
-type Props = {s: ViewState; roadChapter?: {name:string;index:number;reveal:number}; focus?: Focus; onFocusFeature?: (f: Feature) => void; film?: boolean; title?: string; subtitle?: string; chapter?: string; caption?: {zh: string; en: string}; picture?: string; onChange?: (p: Partial<ViewState>) => void; onTrigger?: () => void};
+type Props = {s: ViewState; productOpacity?:number; roadChapter?: {name:string;index:number;reveal:number}; focus?: Focus; onFocusFeature?: (f: Feature) => void; film?: boolean; title?: string; subtitle?: string; chapter?: string; caption?: {zh: string; en: string}; picture?: string; onChange?: (p: Partial<ViewState>) => void; onTrigger?: () => void};
 const stages = ['空间传播', '阵列接收', '本地识别', '触觉提醒'];
 const stageEn = ['SOUND FIELD', 'ACQUISITION', 'ON-DEVICE AI', 'HAPTIC RESPONSE'];
 const phaseDetail = ['声源发出 · 波前抵达手表', '多点收音 · 转换为数字信号', '提取特征 · 分类与置信度判断', '图标 + 文字 + 可区分振动'];
@@ -23,7 +23,7 @@ const Label: React.FC<{point: [number, number, number]; orbit: number; faceView?
   return <div className={`sb-label ${side}`} style={{left: position.left, top: position.top, color}}><span className="anchor"/><div className="leader" style={{width: length}}/><div className="label-copy"><strong>{title}</strong><small>{text}</small></div></div>;
 };
 
-export const Experience: React.FC<Props> = ({s, roadChapter, focus = {}, onFocusFeature, film = false, title = '让重要的声音，被感知。', subtitle = 'FROM SOUND TO A SENSE OF SAFETY', chapter = '交互演示 / LIVE PRODUCT STUDY', caption, picture, onChange, onTrigger}) => {
+export const Experience: React.FC<Props> = ({s, productOpacity=1, roadChapter, focus = {}, onFocusFeature, film = false, title = '让重要的声音，被感知。', subtitle = 'FROM SOUND TO A SENSE OF SAFETY', chapter = '交互演示 / LIVE PRODUCT STUDY', caption, picture, onChange, onTrigger}) => {
   const focused = (Object.entries(focus).sort((a,b) => b[1]-a[1])[0] ?? ['source',0]) as [Feature, number];
   const highlight = (key: Feature): React.CSSProperties => ({background: `rgba(234,238,234,${(focus[key] ?? 0)*.11})`, boxShadow: `inset 3px 0 rgba(255,255,255,${focus[key] ?? 0})`, opacity: 1-focused[1]*.22+(focus[key] ?? 0)*.22});
   const select = (key: Feature, patch: Partial<ViewState>) => {onFocusFeature?.(key);onChange?.(patch);};
@@ -52,7 +52,7 @@ export const Experience: React.FC<Props> = ({s, roadChapter, focus = {}, onFocus
       <div className="mode-buttons" style={highlight('mode')}><button className={s.mode === 'paused' ? 'chosen' : ''} onClick={() => select('mode', {mode: s.mode === 'paused' ? 'listening' : 'paused', time: 0})}>{s.mode === 'paused' ? '▷ 恢复监听' : 'Ⅱ 暂停监听'}</button><button className={s.mode === 'charging' ? 'chosen' : ''} onClick={() => select('mode', {mode: s.mode === 'charging' ? 'listening' : 'charging', time: 0})}>ϟ 充电</button></div>
       <div className="privacy-note" style={highlight('privacy')}><span>⌾</span><div>声音在本地处理<small>不保存原始录音 · 由你掌控</small></div></div>
     </aside>}
-    <div className="three-stage" onPointerDown={e => {if(!film) e.currentTarget.setPointerCapture(e.pointerId);}} onPointerMove={e => {if(e.buttons === 1 && !film) onChange?.({orbit: Math.max(-1.4, Math.min(1.4, s.orbit + e.movementX * .006))});}}>
+    <div className="three-stage" style={{opacity:productOpacity}} onPointerDown={e => {if(!film) e.currentTarget.setPointerCapture(e.pointerId);}} onPointerMove={e => {if(e.buttons === 1 && !film) onChange?.({orbit: Math.max(-1.4, Math.min(1.4, s.orbit + e.movementX * .006))});}}>
       {film ? <ThreeCanvas {...canvasProps} width={STAGE_W} height={STAGE_H}><WatchWorld s={s} showSource={showSource}/></ThreeCanvas> : <Canvas {...canvasProps} style={{width: STAGE_W, height: STAGE_H}}><CanvasSize/><WatchWorld s={s} showSource={showSource}/></Canvas>}
       {showSource && <Label point={sourcePosition(s.bearing)} orbit={s.orbit} faceView={s.faceView} title={`${event.zh}声源`} text={p === 0 ? '声波正在传播' : 'SPATIAL SOUND SOURCE'} side="left" color={event.color}/>}
       {canListen && (s.directionPreview || p === 1) && micArrivals(s.bearing).map(m => <Label key={m.id} point={[m.x,1.4,m.z]} orbit={s.orbit} faceView={s.faceView} title={m.id} text={`${Math.round(m.delay)} μs`} side={m.x<0?'left':'right'} length={20} color={p === 1 && s.time >= 3.2+m.fraction*.85 ? '#f4e0b7' : '#a7b2b0'}/>)}

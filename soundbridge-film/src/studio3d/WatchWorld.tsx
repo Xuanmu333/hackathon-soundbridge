@@ -111,7 +111,7 @@ const Strap: React.FC<{sign: number}> = ({sign}) => {
 };
 
 const Face: React.FC<{s: ViewState}> = ({s}) => {
-  const p = phase(s); const event = events[s.event];const {mode, largeText, uncertain, bearing} = s;
+  const p = phase(s); const event = events[s.event];const {mode, largeText, uncertain, bearing} = s;const highlight=s.bearingHighlight??0;
   const texture = useMemo(() => {
     const canvas = document.createElement('canvas'); canvas.width = canvas.height = 768;
     const ctx = canvas.getContext('2d')!;
@@ -136,12 +136,12 @@ const Face: React.FC<{s: ViewState}> = ({s}) => {
         for(const r of [18,31]){ctx.beginPath();ctx.arc(10,0,r,-.7,.7);ctx.stroke();}
       }
       ctx.restore();
-      ctx.fillStyle='#f4f7f4';ctx.font=uncertain?'500 49px "PingFang SC",sans-serif':'500 94px Helvetica';ctx.fillText(uncertain?'方向不确定':formatBearing(bearing),384,388);
+      ctx.save();ctx.shadowColor='#ffdca0';ctx.shadowBlur=highlight*28;ctx.fillStyle=`rgba(243,199,137,${highlight*.16})`;ctx.beginPath();ctx.roundRect(216,286,336,132,22);ctx.fill();ctx.strokeStyle=`rgba(255,222,170,${highlight*.8})`;ctx.lineWidth=3;ctx.stroke();ctx.fillStyle='#f4f7f4';ctx.font=uncertain?'500 49px "PingFang SC",sans-serif':`500 ${94+highlight*16}px Helvetica`;ctx.fillText(uncertain?'方向不确定':formatBearing(bearing),384,388);ctx.restore();
       ctx.fillStyle=color;ctx.font=`500 ${largeText?48:39}px "PingFang SC",sans-serif`;ctx.fillText(uncertain?'仅提示声音类别':`约 · ${bearingLabel(bearing)}`,384,456);
       ctx.fillStyle='#9caea4';ctx.font='24px "PingFang SC",sans-serif';ctx.fillText('相对表盘 12 点方向',384,514);
       ctx.fillStyle='#e2ebe4';ctx.font='29px "PingFang SC",sans-serif';ctx.fillText('请观察周围',384,583);
       ctx.fillStyle='#7f9187';ctx.font='21px "PingFang SC",sans-serif';ctx.fillText('来向概念示意',384,631);
-      if(!uncertain){const a=bearing*Math.PI/180-Math.PI/2;ctx.strokeStyle=color;ctx.lineWidth=9;ctx.beginPath();ctx.arc(384,384,332,a-.19,a+.19);ctx.stroke();ctx.save();ctx.translate(384,384);ctx.rotate(a);ctx.fillStyle=color;ctx.beginPath();ctx.moveTo(289,0);ctx.lineTo(264,-12);ctx.lineTo(264,12);ctx.closePath();ctx.fill();ctx.restore();}
+      if(!uncertain){const a=bearing*Math.PI/180-Math.PI/2;ctx.strokeStyle=color;ctx.lineWidth=9+highlight*8;ctx.shadowColor=color;ctx.shadowBlur=highlight*18;ctx.beginPath();ctx.arc(384,384,332,a-.19,a+.19);ctx.stroke();ctx.save();ctx.translate(384,384);ctx.rotate(a);ctx.fillStyle=color;ctx.beginPath();ctx.moveTo(289,0);ctx.lineTo(264,-12);ctx.lineTo(264,12);ctx.closePath();ctx.fill();ctx.restore();}
     } else {
     ctx.textAlign = 'center'; ctx.fillStyle = '#9bb4b7'; ctx.font = '26px Helvetica';ctx.fillText('S O U N D B R I D G E', 384, 136);
     ctx.fillStyle = '#f4faf8'; ctx.font = '500 76px Helvetica';ctx.fillText('10:24', 384, 238);
@@ -164,7 +164,7 @@ const Face: React.FC<{s: ViewState}> = ({s}) => {
     if(p === 3 && !uncertain) {ctx.strokeStyle = color;ctx.lineWidth = 10;ctx.beginPath();const a = bearing * Math.PI / 180 - Math.PI / 2;ctx.arc(384, 384, 343, a - .42, a + .42);ctx.stroke();}
     }
     const map = new THREE.CanvasTexture(canvas);map.colorSpace = THREE.SRGBColorSpace;map.anisotropy = 8;return map;
-  }, [p, mode, largeText, uncertain, bearing, event]);
+  }, [p, mode, largeText, uncertain, bearing, event, highlight]);
   useEffect(() => () => texture.dispose(), [texture]);
   return <mesh rotation={[-Math.PI / 2, 0, 0]}><circleGeometry args={[.91, 96]}/><meshBasicMaterial map={texture} toneMapped={false}/></mesh>;
 };

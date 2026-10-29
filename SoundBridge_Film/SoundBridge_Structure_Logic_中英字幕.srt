@@ -1,0 +1,139 @@
+1
+00:00:00,550 --> 00:00:06,934
+SoundBridge，为听障人士设计的环境感知手表。先从它的内部看起。
+SoundBridge is an environmental awareness watch for deaf and hard-of-hearing people. Let's look inside.
+
+2
+00:00:07,105 --> 00:00:14,329
+四个麦克风接收声音，处理电路分析信号，显示模组和触觉马达传达提醒。
+Four microphones capture sound. The processor analyzes signals. The display and haptic actuator deliver cues.
+
+3
+00:00:14,500 --> 00:00:19,420
+这些部件如何协作，把声音变成可感知的安全线索？
+How do these components turn sound into perceptible safety cues?
+
+4
+00:00:20,550 --> 00:00:25,062
+四路麦克风同步收音，把声音转成数字信号。
+Four microphones capture sound together and convert it into digital signals.
+
+5
+00:00:25,945 --> 00:00:33,361
+一条路径提取频谱特征，识别车铃或鸣笛；另一条比较到达时差，估算来向。
+One path extracts spectral features to classify bells or horns. Another compares arrival times to estimate direction.
+
+6
+00:00:34,244 --> 00:00:41,420
+两路结果汇合：振动引起注意，表盘用图标、文字和角度，提示往哪里看。
+The results combine: vibration gets attention; icons, text and angles show where to look.
+
+7
+00:00:42,550 --> 00:00:47,521
+现在，回到小林的一天。她是一位听障人士，正在独自出行。
+Now, back to Xiaolin's day. She is deaf or hard of hearing and is travelling independently.
+
+8
+00:00:47,610 --> 00:00:51,420
+让我们看看，腕上的线索如何帮助她留意路况。
+Let's see how cues on her wrist help her stay aware of the road.
+
+9
+00:00:52,550 --> 00:00:55,800
+骑行者从左后方接近，车铃响起。
+A cyclist approaches from behind on the left and rings a bell.
+
+10
+00:00:55,895 --> 00:01:00,420
+四个麦克风接收声音，识别车铃后，发出三次短振。
+Four microphones capture the sound. Recognizing the bicycle bell triggers three short pulses.
+
+11
+00:01:01,550 --> 00:01:05,716
+三次短振引起注意，小林抬腕查看类别和来向。
+Three short pulses get her attention. Xiaolin checks the sound class and direction on her wrist.
+
+12
+00:01:05,808 --> 00:01:09,420
+她转头确认，靠边让行，等骑行者通过。
+She looks around, moves aside and lets the cyclist pass.
+
+13
+00:01:10,550 --> 00:01:15,062
+比较四个麦克风的到达时差，可以估算声音来向。
+Comparing arrival times at four microphones helps estimate direction.
+
+14
+00:01:15,396 --> 00:01:21,420
+骑行者从左后方经过左前方，表盘角度与方位标记同步变化。
+As the cyclist moves from rear left to front left, the dial angle and pointer move together.
+
+15
+00:01:22,550 --> 00:01:25,293
+来到路口，一辆车从右前方驶来。
+At a crossing, a vehicle approaches from the front right.
+
+16
+00:01:25,372 --> 00:01:29,646
+识别鸣笛后，两次长振提醒她，表盘显示类别和来向。
+Recognizing the horn triggers two long pulses. The dial shows the sound class and direction.
+
+17
+00:01:29,726 --> 00:01:33,420
+收到振动后，她抬腕查看，在路缘内停步观察。
+Feeling the vibration, she checks her watch and stops before the curb.
+
+18
+00:01:34,550 --> 00:01:38,990
+看清车辆的行进方向，她留在安全的位置等待。
+She checks the vehicle direction and waits in a safe position.
+
+19
+00:01:39,148 --> 00:01:43,420
+等车辆通过，确认道路情况，再继续前行。
+After it passes, she checks the road and continues.
+
+20
+00:01:44,550 --> 00:01:50,086
+看这里，表盘高亮角度与方向箭头，说明声音从哪里来。
+Here, the dial highlights the angle and directional arrow to show where the sound comes from.
+
+21
+00:01:50,186 --> 00:01:55,420
+触觉引起注意，视觉补充信息，最后由她观察和判断。
+Touch gets her attention. Visual cues add context. She observes and decides.
+
+22
+00:01:56,550 --> 00:02:01,257
+在安全位置停稳后，小林调整振动强度和文字大小。
+Stopped in a safe place, Xiaolin adjusts vibration strength and text size.
+
+23
+00:02:01,356 --> 00:02:05,420
+让提醒清楚而舒适，后续行程沿用她的设置。
+Clear, comfortable cues continue with her chosen settings.
+
+24
+00:02:06,550 --> 00:02:11,542
+另一位骑行者从右后方接近，手表再次识别车铃。
+Another cyclist approaches from behind on the right. The watch identifies the bell.
+
+25
+00:02:11,729 --> 00:02:16,505
+短振与右后方提示出现，小林抬腕，转头观察。
+Short pulses and a rear-right cue appear. Xiaolin checks her wrist and looks around.
+
+26
+00:02:16,692 --> 00:02:21,420
+她让出空间，保持对周围的警觉，等待对方通过。
+She makes space, stays aware of her surroundings and lets the rider pass.
+
+27
+00:02:22,550 --> 00:02:26,061
+安全感，来自及时的线索，也来自自己的判断。
+Confidence comes from timely cues and her own judgment.
+
+28
+00:02:26,143 --> 00:02:29,420
+SoundBridge，为听障人士设计的环境感知手表。
+SoundBridge. An environmental awareness watch for deaf and hard-of-hearing people.

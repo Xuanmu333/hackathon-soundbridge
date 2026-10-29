@@ -1,0 +1,198 @@
+[
+  {
+    "text": "SoundBridge，为听障人士设计的环境感知手表。先从它的内部看起。",
+    "startMs": 550,
+    "endMs": 6934,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "四个麦克风接收声音，处理电路分析信号，显示模组和触觉马达传达提醒。",
+    "startMs": 7105,
+    "endMs": 14329,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "这些部件如何协作，把声音变成可感知的安全线索？",
+    "startMs": 14500,
+    "endMs": 19420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "四路麦克风同步收音，把声音转成数字信号。",
+    "startMs": 20550,
+    "endMs": 25062,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "一条路径提取频谱特征，识别车铃或鸣笛；另一条比较到达时差，估算来向。",
+    "startMs": 25945,
+    "endMs": 33361,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "两路结果汇合：振动引起注意，表盘用图标、文字和角度，提示往哪里看。",
+    "startMs": 34244,
+    "endMs": 41420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "现在，回到小林的一天。她是一位听障人士，正在独自出行。",
+    "startMs": 42550,
+    "endMs": 47521,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "让我们看看，腕上的线索如何帮助她留意路况。",
+    "startMs": 47610,
+    "endMs": 51420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "骑行者从左后方接近，车铃响起。",
+    "startMs": 52550,
+    "endMs": 55800,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "四个麦克风接收声音，识别车铃后，发出三次短振。",
+    "startMs": 55895,
+    "endMs": 60420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "三次短振引起注意，小林抬腕查看类别和来向。",
+    "startMs": 61550,
+    "endMs": 65716,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "她转头确认，靠边让行，等骑行者通过。",
+    "startMs": 65808,
+    "endMs": 69420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "比较四个麦克风的到达时差，可以估算声音来向。",
+    "startMs": 70550,
+    "endMs": 75062,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "骑行者从左后方经过左前方，表盘角度与方位标记同步变化。",
+    "startMs": 75396,
+    "endMs": 81420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "来到路口，一辆车从右前方驶来。",
+    "startMs": 82550,
+    "endMs": 85293,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "识别鸣笛后，两次长振提醒她，表盘显示类别和来向。",
+    "startMs": 85372,
+    "endMs": 89646,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "收到振动后，她抬腕查看，在路缘内停步观察。",
+    "startMs": 89726,
+    "endMs": 93420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "看清车辆的行进方向，她留在安全的位置等待。",
+    "startMs": 94550,
+    "endMs": 98990,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "等车辆通过，确认道路情况，再继续前行。",
+    "startMs": 99148,
+    "endMs": 103420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "看这里，表盘高亮角度与方向箭头，说明声音从哪里来。",
+    "startMs": 104550,
+    "endMs": 110086,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "触觉引起注意，视觉补充信息，最后由她观察和判断。",
+    "startMs": 110186,
+    "endMs": 115420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "在安全位置停稳后，小林调整振动强度和文字大小。",
+    "startMs": 116550,
+    "endMs": 121257,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "让提醒清楚而舒适，后续行程沿用她的设置。",
+    "startMs": 121356,
+    "endMs": 125420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "另一位骑行者从右后方接近，手表再次识别车铃。",
+    "startMs": 126550,
+    "endMs": 131542,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "短振与右后方提示出现，小林抬腕，转头观察。",
+    "startMs": 131729,
+    "endMs": 136505,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "她让出空间，保持对周围的警觉，等待对方通过。",
+    "startMs": 136692,
+    "endMs": 141420,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "安全感，来自及时的线索，也来自自己的判断。",
+    "startMs": 142550,
+    "endMs": 146061,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "SoundBridge，为听障人士设计的环境感知手表。",
+    "startMs": 146143,
+    "endMs": 149420,
+    "timestampMs": null,
+    "confidence": null
+  }
+]
