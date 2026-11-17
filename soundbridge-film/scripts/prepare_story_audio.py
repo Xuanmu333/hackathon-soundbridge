@@ -6,7 +6,8 @@ OUT=ROOT.parent/'SoundBridge_Film'
 edition=sys.argv[1] if len(sys.argv)>1 else 'story'
 assert edition in ('story','road')
 scenes=json.loads((ROOT/f'src/{edition}-outline.json').read_text())
-voice_dir=ROOT/f'public/voice-{edition}';voice_dir.mkdir(exist_ok=True)
+voice_folder='voice-road-steady' if edition=='road' else f'voice-{edition}'
+voice_dir=ROOT/'public'/voice_folder;voice_dir.mkdir(exist_ok=True)
 def filename(i,j,text):return f'{i:02}-{j:02}-{hashlib.sha256(text.encode()).hexdigest()[:8]}.mp3'
 def length(p):return float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',str(p)]))
 async def main():
@@ -26,14 +27,16 @@ async def main():
  for i,scene in enumerate(scenes):
   files=[voice_dir/filename(i,j,l['zh']) for j,l in enumerate(scene['lines'])]
   lengths=[length(p) for p in files];dur=scene['duration'];available=dur-1.25-.18*(len(files)-1)
-  speed=max(1,sum(lengths)/available);speeds.append(speed)
+  speed=1 if edition=='road' else max(1,sum(lengths)/available);speeds.append(speed)
+  if edition=='road' and sum(lengths)+.35*(len(files)-1)+1>dur:
+   raise ValueError(f'{scene["name"]}: speech needs {sum(lengths)+.35*(len(files)-1)+1:.2f}s; scene has {dur}s. Shorten copy, never accelerate.')
   if speed>1:
    for p in files:
     tmp=p.with_suffix('.tmp.mp3');subprocess.run(['ffmpeg','-y','-v','error','-i',str(p),'-af',f'atempo={speed:.6f}',str(tmp)],check=True);tmp.replace(p)
    lengths=[length(p) for p in files]
-  gap=max(.18,(dur-1.25-sum(lengths))/(len(files)-1 or 1));start=.55;voice=[]
+  gap=.35 if edition=='road' else max(.18,(dur-1.25-sum(lengths))/(len(files)-1 or 1));start=.55;voice=[]
   for line,p,d in zip(scene['lines'],files,lengths):
-   voice.append(dict(file=f'voice-{edition}/{p.name}',start=round(start,3),duration=d,**line))
+   voice.append(dict(file=f'{voice_folder}/{p.name}',start=round(start,3),duration=d,playbackRate=1,**line))
    cap=dict(text=line['zh'],startMs=round((start_global+start)*1000),endMs=round((start_global+min(start+d+.12,dur-.2))*1000),timestampMs=None,confidence=None)
    captions.append(cap);english.append({**cap,'text':line['en']});start+=d+gap
   data.append({k:scene[k] for k in ['name','duration','title','en']}|dict(start=start_global,voice=voice));start_global+=dur

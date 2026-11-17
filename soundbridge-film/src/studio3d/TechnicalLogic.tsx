@@ -1,9 +1,10 @@
 import {ease} from './state';
 
 export const TechnicalLogic=({seconds}:{seconds:number})=>{
- const t=seconds-20,opacity=ease((seconds-19)/3)*(1-ease((seconds-40)/2));
- const capture=ease(t/2),analysis=ease((t-4)/2),fusion=ease((t-12)/2),output=ease((t-15)/2);
- const pulses=[16.2,16.8,17.4].map(start=>t>=start&&t<start+.25?Math.sin((t-start)/.25*Math.PI):0);
+ const t=seconds-12,opacity=ease((seconds-11)/2)*(1-ease((seconds-27)/1));
+ const capture=ease(t/.8),analysis=ease((t-1)/.8),fusion=ease((t-4)/1),output=ease((t-6)/1);
+ const horn=t>=10,bearing=Math.round(-45+105*ease((t-8)/4));
+ const pulses=(horn?[12,13.2]:[7.2,7.8,8.4]).map(start=>{const duration=horn?.75:.25;return t>=start&&t<start+duration?Math.sin((t-start)/duration*Math.PI):0;});
  const wire=(d:string,level:number)=><g opacity={.18+.82*level}><path d={d} fill="none" stroke="#5e625a" strokeWidth="2"/><path d={d} fill="none" stroke="#e5bc84" strokeWidth="2" strokeDasharray="6 16" strokeDashoffset={-seconds*32}/></g>;
  return <div className="technical-logic" style={{opacity}}>
   <div className="logic-title"><small>ON-DEVICE SIGNAL INTELLIGENCE</small><h2>同一声音，两路解析。</h2><p>声音类别与空间来向，汇合为一份清楚的提醒。</p></div>
@@ -17,23 +18,23 @@ export const TechnicalLogic=({seconds}:{seconds:number})=>{
    </g>
    <g opacity={.2+.8*analysis}>
     <rect x="285" y="35" width="250" height="160" rx="18" fill="#252a25" stroke="#c69b6e"/>
-    <text x="310" y="72" fill="#d5b78f" fontSize="14">01 / 声音是什么</text><text x="310" y="109" fill="#f2eee4" fontSize="24">频谱特征 → 分类</text>
+    <text x="310" y="72" fill="#d5b78f" fontSize="14">01 / 端侧 AI 识别</text><text x="310" y="109" fill="#f2eee4" fontSize="22">声谱图 → AI 分类</text>
     {Array.from({length:22},(_,i)=><rect key={i} x={312+i*6} y={152-(6+Math.abs(Math.sin(i*.7+t))*24)} width="3" height={6+Math.abs(Math.sin(i*.7+t))*24} fill="#ce9c68"/>)}
-    <text x="493" y="153" textAnchor="middle" fill="#f1d4aa" fontSize="18">车铃</text>
+    <text x="493" y="153" textAnchor="middle" fill="#f1d4aa" fontSize="18">{horn?'鸣笛':'车铃'}</text>
     <rect x="285" y="255" width="250" height="160" rx="18" fill="#252a25" stroke="#c69b6e"/>
     <text x="310" y="292" fill="#d5b78f" fontSize="14">02 / 声音从哪里来</text><text x="310" y="330" fill="#f2eee4" fontSize="24">到达时差 → 来向</text>
-    <text x="310" y="373" fill="#b7c2b5" fontSize="16">Δt₁ · Δt₂ · Δt₃</text><text x="490" y="373" textAnchor="middle" fill="#f1d4aa" fontSize="27">−45°</text>
+    <text x="310" y="373" fill="#b7c2b5" fontSize="16">时差 + 手腕姿态</text><text x="490" y="373" textAnchor="middle" fill="#f1d4aa" fontSize="27">{bearing>0?'+':''}{bearing}°</text>
    </g>
    <g opacity={.2+.8*fusion}><circle cx="710" cy="225" r="78" fill="#272b25" stroke="#c8a476" strokeWidth="2"/><circle cx="710" cy="225" r={88+Math.sin(t*2)*2} fill="none" stroke="#a1785066"/><text x="710" y="217" textAnchor="middle" fill="#f2e6d4" fontSize="24">结果汇合</text><text x="710" y="248" textAnchor="middle" fill="#b9c2b5" fontSize="15">类别 + 来向</text></g>
    <g opacity={.15+.85*output}>
     <rect x="855" y="65" width="255" height="320" rx="22" fill="#252a25" stroke="#dab889"/>
-    <text x="882" y="104" fill="#efddc2" fontSize="20">视觉 · 看清来向</text><text x="982" y="157" textAnchor="middle" fill="#edd3aa" fontSize="17">车铃 / 左前方</text>
-    <rect x="901" y="171" width="162" height="65" rx="12" fill="#ad723033" stroke="#ecc68a" opacity={.7+.3*Math.sin(t*3)**2}/><text x="982" y="218" textAnchor="middle" fill="#fff0d6" fontSize="46">−45°</text>
+    <text x="882" y="104" fill="#efddc2" fontSize="20">视觉 · 看清来向</text><text x="982" y="157" textAnchor="middle" fill="#edd3aa" fontSize="17">{horn?'鸣笛 / 右前方':'车铃 / 左前方'}</text>
+    <rect x="901" y="171" width="162" height="65" rx="12" fill="#ad723033" stroke="#ecc68a" opacity={.7+.3*Math.sin(t*3)**2}/><text x="982" y="218" textAnchor="middle" fill="#fff0d6" fontSize="46">{bearing>0?'+':''}{bearing}°</text>
     <path d="M882 258H1083" stroke="#5a6155"/><text x="882" y="291" fill="#efddc2" fontSize="20">触觉 · 引起注意</text>
-    {[0,1,2].map(i=><rect key={i} x={885+i*62} y={321-pulses[i]*9} width="43" height={12+pulses[i]*18} rx="5" fill="#edc58d"/>)}
-    <text x="982" y="366" textAnchor="middle" fill="#b8c3b3" fontSize="15">三次短振</text>
+    {pulses.map((_,i)=><rect key={i} x={885+i*(horn?105:62)} y={321-pulses[i]*9} width={horn?82:43} height={12+pulses[i]*18} rx="5" fill="#edc58d"/>)}
+    <text x="982" y="366" textAnchor="middle" fill="#b8c3b3" fontSize="15">{horn?'两次长振':'三次短振'}</text>
    </g>
   </svg>
-  <div className="logic-conclusion">{t<4?'接收同一次声音，形成四路数字信号':t<12?'并行解析：识别声音类别，同时估算声源来向':t<16?'把“发生了什么”与“从哪里来”关联起来':'触觉引起注意 → 视觉补充信息 → 使用者观察与判断'}</div>
+  <div className="logic-conclusion">{t<2?'接收同一次声音，形成四路数字信号':t<5?'并行解析：识别声音类别，同时估算声源来向':t<7?'把“发生了什么”与“从哪里来”关联起来':'触觉引起注意 → 视觉补充信息 → 使用者观察与判断'}</div>
  </div>;
 };

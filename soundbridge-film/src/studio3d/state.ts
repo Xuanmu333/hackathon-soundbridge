@@ -1,9 +1,9 @@
-export type SoundEvent = 'bike' | 'bell' | 'horn';
+export type SoundEvent = 'bike' | 'bell' | 'horn' | 'siren' | 'engine' | 'construction' | 'noise';
 export type Mode = 'listening' | 'paused' | 'charging' | 'low' | 'fault';
 export type ViewState = {
   event: SoundEvent; mode: Mode; bearing: number; strength: number;
   exploded: number; orbit: number; time: number; uncertain: boolean; largeText: boolean;
-  directionPreview: boolean; faceView: number; bearingHighlight?: number;
+  directionPreview: boolean; faceView: number; bearingHighlight?: number; directionReady?: boolean; sourceBearing?: number; sourceRadius?: number; wristYaw?: number; wristTilt?: number; hapticTime?: number; componentFocus?: number; alertStage?: 'repeat'|'strong'|'viewing'|'confirmed';
 };
 export const initialState: ViewState = {
   event: 'bike', mode: 'listening', bearing: -115, strength: .65,
@@ -14,6 +14,10 @@ export const events = {
   bike: {zh: '车铃', en: 'BICYCLE BELL', pattern: '三次短振', color: '#f3ba65'},
   bell: {zh: '门铃', en: 'DOORBELL', pattern: '两组双振', color: '#72e4cb'},
   horn: {zh: '鸣笛', en: 'VEHICLE HORN', pattern: '两次长振', color: '#f3ba65'},
+  siren: {zh: '警笛', en: 'SIREN', pattern: '三次长振', color: '#f3ba65'},
+  engine: {zh: '车辆运行声', en: 'VEHICLE SOUND', pattern: '两次短振', color: '#f3ba65'},
+  construction: {zh: '施工声', en: 'CONSTRUCTION', pattern: '一长两短', color: '#f3ba65'},
+  noise: {zh: '环境底噪', en: 'BACKGROUND', pattern: '不触发提醒', color: '#89938c'},
 };
 export const active = (s: ViewState) => s.mode === 'listening' || s.mode === 'low';
 export const phase = (s: ViewState) => !active(s) ? -1 : s.time < .7 ? -1 : s.time < 3.2 ? 0 : s.time < 4.6 ? 1 : s.time < 7.1 ? 2 : 3;
@@ -37,10 +41,17 @@ export const micArrivals = (bearing: number) => {
   const first = Math.min(...times), span = Math.max(...times) - first;
   return microphones.map((m, i) => ({...m, delay: times[i] - first, fraction: span > 0 ? (times[i] - first) / span : 0}));
 };
-export const hapticPattern = (event: SoundEvent) => event === 'horn'
+export const hapticPattern = (event: SoundEvent) => event === 'noise' ? [] : event === 'siren' ? [7.25,8.35,9.45].map(start=>({start,duration:.65})) : event === 'engine' ? [7.25,7.85].map(start=>({start,duration:.25})) : event === 'construction' ? [{start:7.25,duration:.65},{start:8.35,duration:.25},{start:8.95,duration:.25}] : event === 'horn'
   ? [{start:7.25,duration:.75},{start:8.45,duration:.75}]
   : (event === 'bell' ? [7.25,7.55,8.25,8.55] : [7.25,7.85,8.45]).map(start=>({start,duration:.25}));
+export const hapticClock = (s: ViewState) => s.hapticTime ?? s.time;
+export const followUpCue = (elapsed:number,acknowledged:boolean,eventPresent=true) => ({
+ active:elapsed>=0&&elapsed<30&&!acknowledged&&eventPresent,
+ clock:7.25+Math.max(0,elapsed)%4,
+ strength:Math.min(.9,.65+Math.floor(Math.max(0,elapsed)/4)*.08),
+});
 export const haptic = (s: ViewState) => {
-  if (!active(s)) return 0;
-  return hapticPattern(s.event).reduce((v, beat) => Math.max(v, s.time >= beat.start && s.time < beat.start + beat.duration ? Math.sin((s.time - beat.start) / beat.duration * Math.PI) : 0), 0);
+  if (!active(s)||s.alertStage==='confirmed') return 0;
+  const time=hapticClock(s);
+  return hapticPattern(s.event).reduce((v, beat) => Math.max(v, time >= beat.start && time < beat.start + beat.duration ? Math.sin((time - beat.start) / beat.duration * Math.PI) : 0), 0);
 };

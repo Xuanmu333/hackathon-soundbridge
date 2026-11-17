@@ -1,0 +1,14 @@
+.sb-template{position:relative;width:1280px;height:720px;flex:none;transform-origin:top left;overflow:hidden;background:#e7ebf1;color:#27263a;font-family:"Helvetica Neue","PingFang SC",sans-serif}
+.sb-wash{position:absolute;inset:0;background:radial-gradient(ellipse at 24% 49%,#dcd9f2 0%,transparent 37%),radial-gradient(ellipse at 74% 43%,#f5f5fa 0%,transparent 53%)}
+.sb-name{position:absolute;font-weight:650;letter-spacing:-.052em;line-height:1.04;white-space:nowrap}
+.sb-coverline{position:absolute;white-space:nowrap;text-align:center;color:#56536e;font-size:22px;letter-spacing:.065em}
+.sb-header-line{position:absolute;top:85px;left:64px;right:64px;height:1px;background:#b8b8cb;transform-origin:left}
+.sb-watch{position:absolute;left:0;top:89px;width:620px;height:537px}
+.sb-contact{position:absolute;left:177px;top:386px;width:263px;height:51px;border-radius:50%;background:radial-gradient(ellipse,#53516d77,transparent 69%);filter:blur(9px);transform:rotate(-7deg)}
+.sb-chapter{position:absolute;left:650px;right:65px;top:119px}.sb-chapter small{font-size:17px;color:#62568d;letter-spacing:.035em}.sb-chapter h1{margin:7px 0 0;font-size:42px;line-height:1.23;font-weight:600;letter-spacing:-.04em}
+.sb-photo{position:absolute;left:650px;top:219px;width:548px;height:204px;overflow:hidden;border-radius:15px}
+.sb-readout{position:absolute;left:650px;top:231px;width:548px}
+.sb-components{display:flex;width:100%;justify-content:space-between;gap:12px}.sb-components>div{flex:1;position:relative;display:flex;align-items:flex-start;flex-direction:column;border-top:1px solid #a49abb;padding-top:12px}.sb-components i{position:absolute;top:-3px;width:5px;height:5px;border-radius:50%;background:#6854ae}.sb-components b{font-size:19px;font-weight:550}.sb-components small{font-size:14px;margin-top:4px;color:#514c67}
+.sb-wave-caption,.sb-feedback{position:absolute;left:650px;right:82px;display:flex;align-items:baseline;gap:12px;color:#454153;font-size:17px}.sb-wave-caption span,.sb-feedback span{font-size:14px;color:#6b647b}.sb-feedback b{font-size:23px;color:#423951;font-weight:550}
+.sb-credit{position:absolute;left:1259px;top:573px;width:15px;height:124px}
+.sb-subtitles{position:absolute;left:128px;right:128px;bottom:23px;text-align:center;color:#252434}.sb-subtitles strong,.sb-subtitles small{display:block}.sb-subtitles strong{font-size:24px;font-weight:550;line-height:1.45}.sb-subtitles small{margin-top:4px;font-size:16px;color:#514e63;line-height:1.32}

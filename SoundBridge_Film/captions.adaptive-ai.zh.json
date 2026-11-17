@@ -1,0 +1,205 @@
+[
+  {
+    "text": "SoundBridge，为听障人士设计的环境感知手表。",
+    "startMs": 550,
+    "endMs": 4894,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "收音、识别，再以画面与振动反馈。",
+    "startMs": 5124,
+    "endMs": 9084,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "四路收音，端侧AI识别车铃和鸣笛，同时估算来向。",
+    "startMs": 12550,
+    "endMs": 18286,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "加入手腕姿态，更新相对当前表盘的方向。",
+    "startMs": 18516,
+    "endMs": 22836,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "触觉唤起注意，视觉补充信息。",
+    "startMs": 23066,
+    "endMs": 26522,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "现在，跟随听障使用者小林，走上一段日常道路。",
+    "startMs": 28550,
+    "endMs": 33446,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "骑行者从左后方接近，车铃响起。",
+    "startMs": 34550,
+    "endMs": 38222,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "手表识别车铃，用三次短振引起注意。",
+    "startMs": 38452,
+    "endMs": 42508,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "小林抬腕，手表更新方位。姿态稳定后，显示方向。",
+    "startMs": 44550,
+    "endMs": 50238,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "她回头确认，靠边让行。",
+    "startMs": 50468,
+    "endMs": 53372,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "比较四路到达时差，估算来向。",
+    "startMs": 54550,
+    "endMs": 57886,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "骑行者经过时，声源、角度和方位标记同步变化。",
+    "startMs": 58116,
+    "endMs": 63324,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "AI还可以区分警笛、车辆运行声和施工声。",
+    "startMs": 64550,
+    "endMs": 69278,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "背景底噪减少打扰，重要事件以不同节奏提示。",
+    "startMs": 69508,
+    "endMs": 74188,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "手臂下垂时，先提醒类别；抬腕后，结合姿态更新方向。",
+    "startMs": 76550,
+    "endMs": 82430,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "不必刻意保持水平。姿态稳定时显示指向，晃动时暂缓显示。",
+    "startMs": 82660,
+    "endMs": 89140,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "角度相对当前表盘，不是身体朝向。",
+    "startMs": 89370,
+    "endMs": 93090,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "路口车辆靠近，手表识别鸣笛，发出两次长振。",
+    "startMs": 94550,
+    "endMs": 99350,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "这一次，小林暂时没有抬腕。提醒不会就此消失。",
+    "startMs": 99580,
+    "endMs": 104836,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "手臂仍下垂，只表示尚未观察到查看动作。",
+    "startMs": 106550,
+    "endMs": 111086,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "车辆提示持续而未确认，手表间隔重复，并逐步增强振动。",
+    "startMs": 111316,
+    "endMs": 117316,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "抬腕后显示方向；点按确认，停止升级，继续观察路况。",
+    "startMs": 117546,
+    "endMs": 123282,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "确认提醒不代表道路安全。小林在路缘内观察车辆。",
+    "startMs": 126550,
+    "endMs": 132142,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "等车辆通过，确认路况再走。",
+    "startMs": 132372,
+    "endMs": 135468,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "在安全位置，调整振动强度和文字大小。",
+    "startMs": 136550,
+    "endMs": 140870,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "重复提醒有间隔和时限，不会无休止振动。",
+    "startMs": 141100,
+    "endMs": 145492,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "另一位骑行者从右后方接近，短振再次提醒她。",
+    "startMs": 146550,
+    "endMs": 151182,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "小林抬腕查看，转头确认，让出空间。",
+    "startMs": 151412,
+    "endMs": 155540,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "SoundBridge，为听障人士出行，提供及时的线索。",
+    "startMs": 156550,
+    "endMs": 161182,
+    "timestampMs": null,
+    "confidence": null
+  }
+]

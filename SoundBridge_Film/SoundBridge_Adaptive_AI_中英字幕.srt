@@ -1,0 +1,144 @@
+1
+00:00:00,550 --> 00:00:04,894
+SoundBridge，为听障人士设计的环境感知手表。
+SoundBridge: an environmental awareness watch for deaf and hard-of-hearing people.
+
+2
+00:00:05,124 --> 00:00:09,084
+收音、识别，再以画面与振动反馈。
+Capture sound, identify it, then respond through visuals and vibration.
+
+3
+00:00:12,550 --> 00:00:18,286
+四路收音，端侧AI识别车铃和鸣笛，同时估算来向。
+Four microphones feed on-device AI to recognize bells and horns, alongside direction estimation.
+
+4
+00:00:18,516 --> 00:00:22,836
+加入手腕姿态，更新相对当前表盘的方向。
+Wrist orientation updates direction relative to the current watch face.
+
+5
+00:00:23,066 --> 00:00:26,522
+触觉唤起注意，视觉补充信息。
+Touch gets attention. Visuals add context.
+
+6
+00:00:28,550 --> 00:00:33,446
+现在，跟随听障使用者小林，走上一段日常道路。
+Now follow Xiaolin, a deaf or hard-of-hearing user, on an everyday journey.
+
+7
+00:00:34,550 --> 00:00:38,222
+骑行者从左后方接近，车铃响起。
+A cyclist approaches from behind on the left and rings a bell.
+
+8
+00:00:38,452 --> 00:00:42,508
+手表识别车铃，用三次短振引起注意。
+The watch identifies the bell and gives three short pulses.
+
+9
+00:00:44,550 --> 00:00:50,238
+小林抬腕，手表更新方位。姿态稳定后，显示方向。
+As Xiaolin raises her wrist, direction updates. The angle and pointer appear once the pose settles.
+
+10
+00:00:50,468 --> 00:00:53,372
+她回头确认，靠边让行。
+She looks around and makes space for the cyclist.
+
+11
+00:00:54,550 --> 00:00:57,886
+比较四路到达时差，估算来向。
+Differences in arrival time across four microphones help estimate direction.
+
+12
+00:00:58,116 --> 00:01:03,324
+骑行者经过时，声源、角度和方位标记同步变化。
+As the cyclist passes, the source, angle and pointer move together.
+
+13
+00:01:04,550 --> 00:01:09,278
+AI还可以区分警笛、车辆运行声和施工声。
+AI can also distinguish sirens, vehicle sounds and construction.
+
+14
+00:01:09,508 --> 00:01:14,188
+背景底噪减少打扰，重要事件以不同节奏提示。
+Background sound causes fewer interruptions. Important events receive distinct patterns.
+
+15
+00:01:16,550 --> 00:01:22,430
+手臂下垂时，先提醒类别；抬腕后，结合姿态更新方向。
+With the arm down, show sound class first. On raising the wrist, use its orientation to update direction.
+
+16
+00:01:22,660 --> 00:01:29,140
+不必刻意保持水平。姿态稳定时显示指向，晃动时暂缓显示。
+No exact horizontal pose is required. Show direction when stable and withhold it during movement.
+
+17
+00:01:29,370 --> 00:01:33,090
+角度相对当前表盘，不是身体朝向。
+The angle is relative to the current watch face, not the body.
+
+18
+00:01:34,550 --> 00:01:39,350
+路口车辆靠近，手表识别鸣笛，发出两次长振。
+A vehicle approaches. The watch recognizes its horn and gives two long pulses.
+
+19
+00:01:39,580 --> 00:01:44,836
+这一次，小林暂时没有抬腕。提醒不会就此消失。
+This time Xiaolin has not raised her wrist yet. The reminder does not simply disappear.
+
+20
+00:01:46,550 --> 00:01:51,086
+手臂仍下垂，只表示尚未观察到查看动作。
+An arm still down only means no viewing gesture has been observed.
+
+21
+00:01:51,316 --> 00:01:57,316
+车辆提示持续而未确认，手表间隔重复，并逐步增强振动。
+While the vehicle cue persists without acknowledgment, pulses repeat with pauses and gradually increase.
+
+22
+00:01:57,546 --> 00:02:03,282
+抬腕后显示方向；点按确认，停止升级，继续观察路况。
+Raise to view direction. Tap to acknowledge, stop escalation and keep observing the road.
+
+23
+00:02:06,550 --> 00:02:12,142
+确认提醒不代表道路安全。小林在路缘内观察车辆。
+Acknowledging a cue does not mean the road is clear. Xiaolin watches from behind the curb.
+
+24
+00:02:12,372 --> 00:02:15,468
+等车辆通过，确认路况再走。
+She lets the vehicle pass and checks the road before moving.
+
+25
+00:02:16,550 --> 00:02:20,870
+在安全位置，调整振动强度和文字大小。
+In a safe place, adjust vibration strength and text size.
+
+26
+00:02:21,100 --> 00:02:25,492
+重复提醒有间隔和时限，不会无休止振动。
+Repeated reminders include pauses and a time limit instead of endless vibration.
+
+27
+00:02:26,550 --> 00:02:31,182
+另一位骑行者从右后方接近，短振再次提醒她。
+Another cyclist approaches from behind on the right. Short pulses alert her again.
+
+28
+00:02:31,412 --> 00:02:35,540
+小林抬腕查看，转头确认，让出空间。
+Xiaolin checks her wrist, looks around and makes space.
+
+29
+00:02:36,550 --> 00:02:41,182
+SoundBridge，为听障人士出行，提供及时的线索。
+SoundBridge brings timely cues to independent journeys for deaf and hard-of-hearing people.

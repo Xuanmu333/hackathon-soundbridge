@@ -1,18 +1,28 @@
-## Current structure and technical-logic edition
+## Hackathon presentation film
 
-The user approved replacing the rejected stylized 3D character with photorealistic character images on 2026-10-28. The active composition is SoundBridge-Road-Film. PhotoJourney.tsx uses frame-driven zoom and crossfades, with a continuous opening-to-inset transition. It does not portray the images as live footage. Road alerts, wrist-check images, curb waiting, and personalization are timed together. The current local output is ../SoundBridge_Film/SoundBridge_Structure_Logic_150s.mp4. The prior Road_Safety film is preserved. Previous videos remain preserved. This structure-and-logic revision is approved for GitHub upload. The preceding narrative edition remains available.
+[Download the 16:9 SoundBridge film](../SoundBridge_Film/SoundBridge_Hackathon_16x9.mp4?raw=1) for the slide deck. The Remotion composition is `SoundBridge-Hackathon` (1920 × 1080, 30 fps, 2:42), with Mandarin narration and bilingual subtitles.
 
-The film opens with internal structure (0-20s), dissolves the watch into a parallel classification/localization flow (20-42s), then returns to Xiaolin's road journey (42-150s). TechnicalLogic.tsx provides frame-driven signal paths and cue graphics. On-dial angle boxes, arrows and arcs pulse during directional explanations, paired with a closer camera view.
+## Adaptive AI edition
 
-RoadNarrative.tsx replaces the film control panel with twelve timed scene explanations and synchronized sensation graphics. Bicycle alerts use three short pulses; horn alerts use two long pulses. The left graphic and Three.js watch share hapticPattern/haptic timing. Mic-arrival and anatomy diagrams follow the corresponding chapters. Personalization explicitly previews a cue, retains strength and text-size choices, and the ending returns to sensing without a stale source marker.
+The active composition is `SoundBridge-Road-Film`, 162 seconds / 4860 frames. The current output is `../SoundBridge_Film/SoundBridge_Adaptive_AI_162s.mp4`. Earlier rendered editions are preserved.
 
-New image assets and full generation prompts are in public/road-photos/. The model was the built-in image_gen tool. Original walking, glance and observe reference images remain in public/safety/ and public/story/. Journey.tsx and road-person.glb are unused rejected experiments; their composition is no longer offered in the root list.
+The opening compresses structure and signal logic into 28 seconds, with component highlights, moving signal paths, and changing classification/direction outputs. The film then follows Xiaolin, a deaf or hard-of-hearing pedestrian, through road awareness, viewing and acknowledgement.
 
-Render SoundBridge-Road-Film to ../SoundBridge_Film/qa/road-render.mp4, then run python3 scripts/finish_road.py SoundBridge_Structure_Logic_150s.mp4 to normalize audio and validate the final file. Run node scripts/check-road.mjs for timing checks and node scripts/qa-road.mjs for key-frame review.
+The 64–76 second classification interlude distinguishes background sound, sirens, vehicle sounds and construction. It demonstrates filtering of notifications, not an implemented noise-cancellation system. `AIRecognition.tsx` visualizes spectral features and candidate classes. No actual microphone or AI model is connected; all classifications and directions are concept animation states. Vehicle sounds alone do not establish collision risk.
+
+`roadState.ts` adds wrist orientation and a fixed-world-source demonstration. Direction is relative to the current dial, hidden while the concept pose is unstable. Raising the wrist is separate from explicit acknowledgement. Follow-up cues repeat with gaps, increase within a capped strength, and end on acknowledgement, event clearance or a 30-second round limit. Left graphics and watch motion share the same haptic clock.
+
+`PhotoJourney.tsx` retains approved photorealistic fictional character stills with frame-driven zoom/crossfades. These are not live footage. The image sequence shows arm down, wrist viewing, tapping and observing traffic in time with the watch.
+
+All 29 voice lines use the same Xiaoxiao voice and +6% generation rate, stored in `public/voice-road-steady/`. No section is accelerated after generation. Road chapters must accommodate the original voice durations; the audio preparation script rejects overflow instead of compressing speech. Bilingual sidecars: `SoundBridge_Adaptive_AI_中英字幕.srt` and `captions.adaptive-ai.zh.json`.
+
+Render `SoundBridge-Road-Film` to `../SoundBridge_Film/qa/road-render.mp4`, then run `python3 scripts/finish_road.py SoundBridge_Adaptive_AI_162s.mp4` for normalization and full-file validation. `node scripts/check-road.mjs` checks timing, pose-relative bearings, pulse patterns, acknowledgement, limits and narrative. `node scripts/qa-road.mjs` exports representative frames for visual review.
+
+Prior structure-and-logic output: `../SoundBridge_Film/SoundBridge_Structure_Logic_150s.mp4`. The legacy interactive console and previous compositions below remain available.
 
 # SoundBridge — Safety, Independence and Humanity
 
-Current editable project: a 150-second Three.js concept film with Chinese narration, bilingual subtitles, a state-driven product console, spatial sound propagation, a red procedural watch with rounded metal casework, curved glass, fine-grain matte straps, studio reflections and a charcoal console and an independent-outing story. Local iteration output: `../SoundBridge_Film/SoundBridge_Road_Safety_150s.mp4`. The previous red edition remains unchanged. This structure-and-logic revision is approved for GitHub upload.
+Previous edition: a 150-second Three.js concept film with Chinese narration, bilingual subtitles, a state-driven product console, spatial sound propagation, a red procedural watch with rounded metal casework, curved glass, fine-grain matte straps, studio reflections and a charcoal console and an independent-outing story. Local iteration output: `../SoundBridge_Film/SoundBridge_Road_Safety_150s.mp4`. The previous red edition remains unchanged. The prior structure-and-logic revision was uploaded separately.
 
 ## Interactive 3D console
 

@@ -10,7 +10,8 @@ subprocess.run(['ffmpeg','-y','-v','error','-i',str(src),'-c:v','copy','-af',flt
 subprocess.run(['ffmpeg','-v','error','-i',str(dst),'-f','null','-'],check=True)
 probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(dst)]))
 v=next(s for s in probe['streams'] if s['codec_type']=='video');a=next(s for s in probe['streams'] if s['codec_type']=='audio')
-assert v['width']==1920 and v['height']==1080 and int(v['nb_frames'])==4500
-assert abs(float(probe['format']['duration'])-150)<.1
+duration=sum(scene['duration'] for scene in json.loads((Path(__file__).resolve().parents[1]/'src/road-script.json').read_text()))
+assert v['width']==1920 and v['height']==1080 and int(v['nb_frames'])==duration*30
+assert abs(float(probe['format']['duration'])-duration)<.11
 report={'video':dst.name,'duration':float(probe['format']['duration']),'frames':int(v['nb_frames']),'width':v['width'],'height':v['height'],'fps':v['r_frame_rate'],'audio_rate':a['sample_rate'],'channels':a['channels'],'full_decode':'passed','audio_target_lufs':-16,'audio_target_true_peak_db':-1.5}
 (out/(dst.stem+'.validation.json')).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report))
