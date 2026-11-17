@@ -1,0 +1,11 @@
+[
+ {"start":0,"end":9,"title":"SoundBridge","en":"An environmental awareness watch","lines":[["SoundBridge，为听障人士设计的环境感知手表。","SoundBridge is an environmental awareness watch for deaf and hard-of-hearing people."]]},
+ {"start":9,"end":24,"title":"身后的车铃","en":"On Xiaolin’s walk","lines":[["小林沿着步道去上班。她看得见前方，却可能错过身后骑行者的车铃。","Xiaolin can see the path ahead. A bicycle bell behind her is easier to miss."]]},
+ {"start":24,"end":39,"title":"她决定怎样让行","en":"A cue she can act on","lines":[["手腕轻振三下。她抬腕看到左后方的标记，转头确认，再往旁边让出一点空间。","Three taps get her attention. She checks the rear-left marker, looks back and makes room."]]},
+ {"start":39,"end":55,"title":"四个收音孔","en":"Finding the direction","lines":[["同一声车铃，先后抵达表壳上的四个麦克风。处理器比较这段微小的时差，估算声音的来向。","The bell reaches four microphones at slightly different times. Their relative delays reveal its bearing."]]},
+ {"start":55,"end":71,"title":"哪些声音值得提醒？","en":"Recognizing road sounds","lines":[["手表上的 AI 比较声谱，区分车铃、鸣笛、警笛和施工声。风声和人群底噪留在背景里。","On-device AI compares sound patterns. Bells, horns, sirens and roadworks can prompt a cue while background noise stays quiet."]]},
+ {"start":71,"end":87,"title":"抬腕后，方向也更新","en":"A bearing relative to the dial","lines":[["手腕转动时，表盘的十二点方向也在变。小林自然抬腕，姿态稳定后，箭头才显示新的相对角度。","As her wrist turns, twelve o’clock turns with it. The pointer updates once her wrist settles."]]},
+ {"start":87,"end":105,"title":"路口的两次长振","en":"A horn at the crossing","lines":[["路口传来鸣笛，手腕长振两下。小林手臂仍垂着。声音持续、提醒尚未确认时，手表隔一会儿再振，逐步增强。","Two long pulses mark a horn. While the event persists without acknowledgement, reminders repeat at intervals and grow stronger."]]},
+ {"start":105,"end":117,"title":"等车通过","en":"Crossing on her own terms","lines":[["小林停在路缘内。她抬腕看清来向，点按结束提醒，抬头观察，等车过去再走。","At the curb, she checks the bearing, taps to end the alert and watches the vehicle pass before moving on."]]},
+ {"start":117,"end":125,"title":"SoundBridge","en":"SoundBridge","lines":[["（无旁白）车辆驶远，小林沿步道继续前行。","No voice-over. The car recedes and Xiaolin continues on her way."]]}
+]
